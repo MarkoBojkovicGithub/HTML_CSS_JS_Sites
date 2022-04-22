@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .conatiner2 {
+      background-color: green;
+      width:400px;
+      height: 400px;
+      position: relative;
+    }
+
+    .Player2 {
+      background-color: black;
+      width:100px;
+      height: 100px;
+      position: absolute;
+
+    }
+    
+  </style>
+
+
+  <body>
+    <!-- Box-->
+    <div class = "conatiner2">
+      <div id = "Animator2" class = "Player2">
+
+      </div>
+    </div>
+    <!-- Button-->
+    <button onclick = "MoveIt()">Click2</button>
+  </body>
+
+  <script>
+    var START = false;
+
+    function MoveIt() {
+
+
+      if(START == false){
+        let position2 = 0;
+        let Element = null;
+        let Animation = document.getElementById("Animator2");
+        clearInterval(Element);
+        Element = setInterval(Step, 1);
+        function Step () {
+          if(position2 == 300) {
+            clearInterval(Element);
+          } else {
+            position2++;
+            Animation.style.left = position2 + "px";
+            Animation.style.top = position2 + "px";
+            Animation.style.transform= `rotateZ(${position2*3}deg)`;
+
+          }
+        }
+        START = true;
+      } else {
+        let position2 = 300;
+        let Element = null;
+        let Animation = document.getElementById("Animator2");
+        clearInterval(Element);
+        Element = setInterval(Step, 1);
+        function Step () {
+          if(position2 == 0) {
+            clearInterval(Element);
+          } else {
+            position2--;
+            Animation.style.left = position2 + "px";
+            Animation.style.top = position2 + "px";
+            Animation.style.transform= `rotateZ(${position2*3}deg)`;
+ 
+          }
+        }
+        START=false;
+      }
+   
+    }
+
+  </script>
+</html>

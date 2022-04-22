@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="Sport.css">
+    <link rel="stylesheet" href="Content.css">
+    <link rel="stylesheet" href="BannerHeader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link href="assets/fontawesome/css/all.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e90804f986.js" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+
+      <!-- Menu-->
+            <!-- Menu holder-->
+            <div class="menuHolder">
+                <div name="BllueMenu">
+                  <div name="MenuBlueShadow">
+
+                  </div>
+                  <p class="SkyText">sky</p>
+                </div>
+                <div name="RedMenu">
+                  <div name="MenuRedShadow">
+
+                  </div>
+                  <div style="background-color:#D20000; width:50%; height: 70%; position: absolute; right:0;">
+
+                  </div>
+                  <div name="ShadowPlacer">
+                    
+                  </div>
+                  <p class="SportText">sports</p>
+                </div>
+             
+       
+                <div name="MenuRedPlacer">
+                    <p class="GetSkySportsText">Get Sky Sports</p>
+                    <div style="display:flex; flex-direction: row; justify-content: center; align-items: center;">
+                      <i class='LogIn far fa-user-circle'></i>
+                      <p class="GetSkySportsText">Log in</p>
+                    </div>
+                    <div id="SearchSpace" class="SearchDiv">
+                      <input id="inputSearch" onclick="ChangeSearchColor()" onmouseleave="ChangeSearchColorBack()" class="Search"  type="text" placeholder="Search Sky Sports">
+                      <i id="PhotoColor" onmouseenter="ChangeSearchColor()" class="SearchPhoto fa fa-search"></i>
+                    </div>
+                 
+                   
+                </div>
+                <div onclick = "DisplayMenu()" id = "MenuPhoneLogo" class="button-phone">
+                  <i style="font-size:22px;" class="fa fa-bars button-size"></i>
+                </div>
+            </div>
+            <!-- Menu List-->
+            <div id="HideMenuID" class="MenuList">
+                <div class="BothSides">
+                    <div class="MenuListHolder">
+                        <ul>
+                           <li><a href="#aa">Home</a></li>
+                           <li><a href="#aa">Sports</a></li>
+                           <li><a href="#aa">Scores</a></li>
+                           <li><a href="#aa">Video</a></li>
+                           <li><a href="#aa">TV</a></li>
+                           <li><a href="#aa">Games</a></li>
+                           <li><a href="#aa">More</a></li>
+                         
+                           
+                        </ul>
+                    </div>
+                    <div id = "Watch_Sky_SportsButtonID" class = "ButtonHolder"> 
+                      <div  name="RedButton">
+                          <p name="WatchText">Watch Sky Sports</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div id = "MenuMobileID" class = "mobile-menu">
+              <div style="background-color:rgb(212, 209, 209); border-bottom:0px;" class ="first-menu-item mobiMenuList">
+                <i style = "font-size:18px; color:rgb(44, 44, 44);" class=' far fa-user-circle'></i>
+                <p style = "margin-left:4.1%;font-family: sans-serif; font-size:14.5px; font-weight: 700; color:rgb(44, 44, 44)"" >Log in</p>
+                <p style = "margin-left:15%;font-family: sans-serif; font-size:14.5px; font-weight: 700; color:rgb(44, 44, 44)"" >Get Sky Sports</p>
+              </div>
+              <div style = "height: 47px;" class ="mobiMenuList">
+                <p class = "men-texu">Home</p>
+              </div>
+              <div style = "height: 40px;" class ="mobiMenuList">
+                <p class = "men-texu">Sports</p>
+              </div>
+              <div style = "height: 40px;"class ="mobiMenuList">
+                <p class = "men-texu">Scores</p>
+              </div>
+              <div style = "height: 40px;"class ="mobiMenuList">
+                <p class = "men-texu">Video</p>
+              </div>
+              <div style = "height: 40px;" class ="mobiMenuList">
+                <p class = "men-texu">TV</p>
+              </div>
+              <div style = "height: 40px;" class ="mobiMenuList">
+                <p class = "men-texu">Sky Bet</p>
+              </div>
+              <div style = "height: 40px;"class ="mobiMenuList">
+                <p class = "men-texu">Games</p>
+              </div>
+              <div style = "height: 40px;"class ="mobiMenuList">
+                <p class = "men-texu">More</p>
+              </div>
+            </div>
+           
+      <!-- Menu-->
+
+
+
+      <!-- CONTENT  -->
+
+      <div class = "MarketingBanner">
+        <div class = "photo-Marketing">
+            <img class = "Photo" src ="Photos/Jota2.jfif">
+        </div>
+        <div class = "text-marketing">
+            <a class = "FootballText Marketing-link"><p>Football</p></a>
+            <a class = "JotaText Marketing-link"><p>Jota double as Liverpool see off Liencester</p></a>
+            <a class = "HowText Marketing-link"><p>How the teams lineUp ></p></a>
+            <a class = "MatchText Marketing-link"><p>Match stats ></p></a>
+        </div>
+      </div>
+
+      <div class = "rowscontainer-tablet">
+        <div class = "card-tablet-left">
+          <div class = "card-Photo-tablet">
+            <img class = "Photo-size-tablet" src = "Photos/Khan.jfif">
+          </div>
+          <div class = "card-text-tablet">
+            <a class = "Marketing-link-card"href="#"><p>Boxing</p></a>
+            <a class = "card-texa-tablet"href="#"><p>The secret sparring which relit Khn's fire</p></a>
+          </div>
+        </div>
+        <div class = "card-tablet-right">
+          <div class = "card-Photo-tablet">
+            <img class = "Photo-size-tablet" src = "Photos/Ronaldo.jfif">
+          </div>
+          <div class = "card-text-tablet">
+            <a class = "Marketing-link-card"href="#"><p>Football</p></a>
+            <a class = "card-texa-tablet"href="#"><p>Ronaldo drought one of many problems for Man Utd </p></a>
+          </div>
+        </div>
+        <div class = "card-tablet-left"  style = "margin-top:30px;">
+          <div class = "card-Photo-tablet">
+            <img class = "Photo-size-tablet" src = "Photos/valieva.jfif">
+          </div>
+          <div class = "card-text-tablet">
+            <a class = "Marketing-link-card"href="#"><p>Winter Sports</p></a>
+            <a class = "card-texa-tablet"href="#"><p>Russian skater Valieva cleared to compete | 'll am emotianally tired!</p></a>
+          </div>
+        </div>
+        <div class = "card-tablet-right"style = "margin-top:30px;" >
+          <div class = "card-Photo-tablet">
+            <img class = "Photo-size-tablet" src = "Photos/djokkovic.jfif">
+          </div>
+          <div class = "card-text-tablet">
+            <a class = "Marketing-link-card"href="#"><p>Tennis</p></a>
+            <a class = "card-texa-tablet"href="#"><p>Djokovic willing to miss out on trophies to avoid Covdi-19 jab</p></a>
+          </div>
+        </div>
+        <div class = "card-tablet-left" style = "margin-top:30px;" >
+          <div class = "card-Photo-tablet">
+            <img class = "Photo-size-tablet" src = "Photos/masi.jfif">
+          </div>
+          <div class = "card-text-tablet">
+            <a class = "Marketing-link-card"href="#"><p>Formula 1</p></a>
+            <a class = "card-texa-tablet"href="#"><p>F1's Abu Dhabi findings on hold | Masi poised for new role</p></a>
+          </div>
+        </div>
+        <div class = "card-tablet-right" style = "margin-top:30px;">
+          <div class = "card-Photo-tablet">
+            <img class = "Photo-size-tablet" src = "Photos/kelly.jfif">
+          </div>
+          <div class = "card-text-tablet">
+            <a class = "Marketing-link-card"href="#"><p>Football</p></a>
+            <a class = "card-texa-tablet"href="#"><p>Kelly on comeback from ACL injury: I have my eyes on the Euros</a>
+          </div>
+        </div>
+       
+      </div>
+      
+      <!-- CONTENT ROWS-->
+      <div class = "rowscontainer">
+        <div class = "card">
+          <div class = "card-Photo">
+            <img class = "Photo-size" src = "Photos/Khan.jfif">
+          </div>
+          <div class = "card-text">
+            <a class = "Marketing-link-card"href="#"><p>Boxing</p></a>
+            <a class = "card-texa"href="#"><p>The secret sparring which relit Khn's fire</p></a>
+          </div>
+        </div>
+        <div class = "card">
+          <div class = "card-Photo">
+            <img class = "Photo-size" src = "Photos/Ronaldo.jfif">
+          </div>
+          <div class = "card-text">
+            <a class = "Marketing-link-card"href="#"><p>Football</p></a>
+            <a class = "card-texa"href="#"><p>Ronaldo drought one of many problems for Man Utd </p></a>
+          </div>
+        </div>
+        <div class = "card-last">
+          <div class = "card-Photo">
+            <img class = "Photo-size" src = "Photos/valieva.jfif">
+          </div>
+          <div class = "card-text">
+            <a class = "Marketing-link-card"href="#"><p>Winter Sports</p></a>
+            <a class = "card-texa"href="#"><p>Russian skater Valieva cleared to compete | 'll am emotianally tired!</p></a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = "rowscontainer-second">
+        <div class = "card">
+          <div class = "card-Photo">
+            <img class = "Photo-size" src = "Photos/djokkovic.jfif">
+          </div>
+          <div class = "card-text">
+            <a class = "Marketing-link-card"href="#"><p>Tennis</p></a>
+            <a class = "card-texa"href="#"><p>Djokovic willing to miss out on trophies to avoid Covdi-19 jab</p></a>
+          </div>
+        </div>
+        <div class = "card">
+          <div class = "card-Photo">
+            <img class = "Photo-size" src = "Photos/masi.jfif">
+          </div>
+          <div class = "card-text">
+            <a class = "Marketing-link-card"href="#"><p>Formula 1</p></a>
+            <a class = "card-texa"href="#"><p>F1's Abu Dhabi findings on hold | Masi poised for new role</p></a>
+          </div>
+        </div>
+        <div class = "card-last">
+          <div class = "card-Photo">
+            <img class = "Photo-size" src = "Photos/kelly.jfif">
+          </div>
+          <div class = "card-text">
+            <a class = "Marketing-link-card"href="#"><p>Football</p></a>
+            <a class = "card-texa"href="#"><p>Kelly on comeback from ACL injury: I have my eyes on the Euros</a>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <!-- Banner Header-->
+
+      <div class = 'Banner-Header-Container'>
+          <img class = "Banner-Header-Container-photo" src = "Photos/BannerHeader.jfif">
+          <!-- Rest text-->
+          <div class = "Text-banner"> 
+            <p class = "Text-banner-Header">Check the Latest News</p>
+            <p class = "Text-banner-par">In a few steps, anywhere near by you at any time</p>
+
+            <div class = 'Button'>
+              <p class = "Button-text">MORE</p>
+            </div>
+            <!--
+            <div class = "Left-block">
+
+            </div>
+        
+            <div class = "right-block">
+
+            </div>
+            <div class = "right-block2">
+
+            </div>
+            -->
+
+          </div>
+      </div>
+      <!--
+      <div class = "Post-banner-holder">
+        <div class = "circl">
+          <div class = "circl-holder">
+            <i class="First-cirlce-icon fa-solid fa-hospital-user"></i>
+            <p class = "circl-holder-text"> 20M+</p>
+            <p class = "circl-holder-text-par">Registrovanih</p>
+            <p class = "circl-holder-text-par2">kupaca</p>
+          </div>
+        </div>
+        <div class = "white-text-holder">
+          <div class = "white-text-holder2">
+            <div class = "circl-holder circl-holder-helper">
+              <i class=" Second-cirlce-icon fa-solid fa-desktop"></i>
+              <p class = "circl-holder-text"> 2M+</p>
+              <p class = "circl-holder-text-par">Korisnika</p>
+              <p class = "circl-holder-text-par2">dnevno</p>
+            </div>
+            <div class = "circl-holder circl-holder-helper2">
+              <i class=" Third-cirlce-icon fa-solid fa-cart-arrow-down"></i>
+              <p class = "circl-holder-text"> 10M+</p>
+              <p class = "circl-holder-text-par">Realizovanih</p>
+              <p class = "circl-holder-text-par2">porudzbina</p>
+            </div>
+          </div>
+        </div>
+        <div class = "arrow">
+
+        </div>
+        <i class=" arrow2 fa-solid fa-angle-left"></i>
+        <div class = "white-hodler">
+
+        </div>
+        <div class = "Post-banner-text-holde">
+
+        </div>
+      </div>
+      <div class = "shop">
+        <img class = "shop-phot" src ="Photos/laptop2.png">
+        <div class ="shop-over">
+        
+        </div>
+      </div>
+    -->
+  
+      
+    
+  </body>
+
+
+
+  <script src="Sport.js"></script>
+  <script src="Content.js"></script>
+</html>

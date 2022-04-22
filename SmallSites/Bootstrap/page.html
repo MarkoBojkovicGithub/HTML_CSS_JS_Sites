@@ -1,0 +1,154 @@
+d<!DOCTYPE html>
+<html>
+<head>
+  <meta name ="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/fontawesome/css/all.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  .box-space {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+  .box1 {
+    background-color: red;
+  }
+  .box2 {
+    background-color: green;
+    display: none;
+  }
+  .box3 {
+    background-color: blue;
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div class = "box-space">
+    <div id = "box1" class = "box box1">
+      
+    </div>
+    <div id = "box2" class = "box box2">
+      
+    </div>
+    <div id = "box3" class = "box box3">
+      
+    </div>
+  </div>
+  <div class = "container mt-2">
+    <ul class = "pagination">
+      <li  onclick = "pagePrevious()" class = "page-item"><a href = "#" class = "page-link">Previous</a></li>
+      <li id = "page1" onclick = "ChangePage(1);" class = "active page-item pageList"><a href = "#1" class = "page-link">1</a></li>
+      <li id = "page2" onclick= "ChangePage(2);" class = "page-item pageList"><a href = "#2" class = "page-link">2</a></li>
+      <li id = "page3" onclick = "ChangePage(3);" class = "page-item pageList"><a href = "#3" class = "page-link">3</a></li>
+      <li onclick ="pageNext()" id = "nex" class = "page-item"><a href = "#" class = "page-link">Next</a></li>
+    </ul>
+  </div>
+</body>
+<script>
+  let next = document.getElementById("nex");
+  let page = 1;
+  let boxHlep = 1;
+
+
+  //Current page
+
+  function ChangePage(helper) {
+    var row = document.getElementsByClassName("pageList");
+    for(let i = 0 ;i <row.length; i ++){
+      row[i].classList.remove("active");
+    }
+    
+    document.getElementById("page"+helper).classList.add("active");
+    page = helper;
+    boxHlep = helper;
+
+    var rowBo = document.getElementsByClassName("box");
+    for(let y = 0 ;y<rowBo.length; y ++) {
+      rowBo[y].style.display = "none";
+    }
+
+    document.getElementById("box"+boxHlep).style.display = "block";
+  
+  }
+
+  //Previous Page
+  
+  function pagePrevious() {
+
+      //Elements 
+    var rowBo = document.getElementsByClassName("box");
+    for(let y = 0 ;y<rowBo.length; y ++) {
+      rowBo[y].style.display = "none";
+    }
+
+
+    if(boxHlep == 1) {
+      document.getElementById("box"+(boxHlep)).style.display = "block";
+    }else {
+      document.getElementById("box"+(--boxHlep)).style.display = "block";
+    }
+    
+       //Page 
+
+    var row = document.getElementsByClassName("pageList");
+    for(let i = 0 ;i <row.length; i ++){
+      row[i].classList.remove("active");
+    }
+
+    switch(page) {
+      case 1: document.getElementById("page"+page).classList.add('active');
+              break;
+      case 2: document.getElementById("page"+--page).classList.add('active');
+              break;
+      case 3: document.getElementById("page"+--page).classList.add('active');
+              break;
+    }
+  }
+
+  //Next page
+  function pageNext() {
+    let row = document.getElementsByClassName("pageList");
+    for(let i = 0 ;i <row.length; i ++){
+      row[i].classList.remove("active");
+    }
+    
+
+    var rowBo = document.getElementsByClassName("box");
+    for(let y = 0 ;y<rowBo.length; y ++) {
+      rowBo[y].style.display = "none";
+    }
+
+    if(boxHlep == 3) {
+      document.getElementById("box"+(boxHlep)).style.display = "block";
+    }else {
+      document.getElementById("box"+(++boxHlep)).style.display = "block";
+    }
+    
+    switch(page) {
+      case 1: document.getElementById("page"+(++page)).classList.add('active');
+              break;
+      case 2: document.getElementById("page"+(++page)).classList.add('active');
+              break;
+      case 3: document.getElementById("page"+page).classList.add('active');
+              break;
+    }
+  }
+</script>
+</html>
+
+
+
+
+
+
+
+

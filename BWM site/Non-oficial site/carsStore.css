@@ -1,0 +1,237 @@
+
+.cars-store-container {
+    max-width: 1560px;
+    margin: auto;
+}
+.cars-store {
+    height: 200px;
+    background-color: transparent;
+    margin: auto;
+}
+.cars-store .cars-store__model-container {
+    height: 390px;
+    background-color: transparent;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+.cars-store__model-container__model {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 10px;
+    position: relative;
+}
+.model__photo {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    z-index: 2;
+}
+.model__header {
+    font-size: 22px;
+    font-weight: 400;
+    word-spacing: -2.6px;
+    margin-bottom: 5px;
+}
+.model__header-electric {
+    font-size: 22px;
+    font-weight: 400;
+    word-spacing: -2.6px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.model__header-m-model {
+    font-size: 22px;
+    font-weight: 400;
+    word-spacing: -2.6px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.model__type-of-fuel {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    display: inline;
+}
+.model__price {
+    font-size: 19.5px;
+    margin-bottom: -8px;
+}
+.model__type-of-fuel-extra {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    color:blue;
+    display: inline;
+}
+.model__link {
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: -16px;
+    padding-top:0px;
+    padding-bottom: 0px;
+    transition-duration: 300ms;
+    display: inline;
+}
+.model__link:hover {
+    transition-duration: 300ms;
+}
+.model__link::before {
+    content: "\203A";
+    font-size: 30px;
+    margin-right:3px;
+    position: relative;
+    top:2px;
+}
+.model__link:hover::before{
+    color:white;
+    transition-duration: 300ms;
+}
+
+.color-white {
+    color: white ;
+}
+.color-white:hover {
+    color:white;
+    
+}
+.color-white::before {
+    content: "" !important;
+}
+.cars-store__model-container__model__badgeCar {
+    position: absolute;
+    top:20px;
+    right:5px;
+}
+.badgeCar__text {
+    font-size: 15px;
+    border-radius: 0;
+
+}
+.model_series1 {
+}
+.model-series2 {
+
+}
+.model-series3 {
+    
+}
+.model-series8 {
+
+}
+.model-seriesZ4-roodster {
+
+}
+.model-seriesM {
+
+}
+.electric {
+
+}
+.model-saloon {
+
+}
+.model-touring {
+
+}
+.model-convertible {}
+.model-coupe {}
+.model-sport-activities-coupe {
+
+}
+.model-sport-activities-vehicle {
+
+}
+.hybrid {
+    
+}
+.hatch {}
+.tourer {}
+
+.hybrid-fuel-photo {
+   width: 58px;
+   position: absolute;
+   top:52px;
+   left:15px;
+   z-index: 1;
+}
+.electric-fuel-photo {
+   width: 95px;
+   position: absolute;
+   top:45px;
+   left:0px;
+   z-index: 1;
+   transform: rotateZ(-45deg);
+}
+.model__header-electric:before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    top:-23px;
+    left:0px;
+    background: url("Photos/BMW_i_100px.png.asset.1583221945801.png") no-repeat;
+    background-size: 27px 15px;
+    z-index: 10;
+    display: block;
+}
+.model__header-m-model:before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    top:-23px;
+    left:0px;
+    background: url("Photos/BMW_M_100px.png.asset.1583225507175.png") no-repeat;
+    background-size: 41px 15px;
+    z-index: 10;
+    display: block;
+}
+.electronic-type-photo {
+    position: absolute;
+    width: 26px;
+    top:var(--photoTop);
+}
+.m-model-type-photo {
+    position: absolute;
+    width: 41px;
+    top:var(--photoTop);
+}
+
+@media only screen and (min-width:990px) {
+    .col-12 { width:100%}
+    .col-3 { 
+        width:24%;
+        margin-right:1%;
+    }
+    .col-10 {width:79%}
+}
+@media only screen and (max-width:989px) and (min-width:520px) {
+    .col-s-6 { width:50%;}
+    .col-s-12 { width:100%}
+    .col-s-10 {
+        width:79%;
+    }
+}
+@media only screen and (min-width:100px) and (max-width:519px) {
+    .col-sm-12 {width:100%; margin-bottom: 2px;}
+    .cars-store__model-container__model {
+        margin-left:10px;
+    }
+    
+}
+@media only screen and (min-width:480px) and (max-width:519px) {
+    .cars-store__model-container {
+        margin-bottom: 65px;
+    }
+}
+@media only screen and (min-width:400px) and (max-width:479px) {
+    .cars-store__model-container {
+        margin-bottom: 35px;
+    }
+}

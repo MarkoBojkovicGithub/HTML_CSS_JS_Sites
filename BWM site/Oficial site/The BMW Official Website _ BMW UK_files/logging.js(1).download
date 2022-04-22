@@ -1,0 +1,36 @@
+// Sophus3 - BMW - 20191119ss
+
+function s3load(path, script){
+    var scriptEl = document.createElement('script');
+    var scriptLst = document.getElementsByTagName('script')[0];
+    
+    if (typeof script === 'undefined') script = 'logging.js';
+    scriptEl.type = 'text/javascript';
+    scriptEl.async = true;
+    scriptEl.src = '//scripts.sophus3.com/' + path + '/' + script;
+    scriptLst.parentNode.insertBefore(scriptEl, scriptLst);
+}
+
+function s3select() {
+    var domain = document.location.hostname;
+    var enddomain = domain.substring(domain.lastIndexOf('.') + 1);
+    var pathN = document.location.pathname;
+    
+    enddomain = enddomain.toLowerCase();
+
+    if (domain ===  'kingoftheflow.it') {
+        s3load('s3s/toyota/it');//see repository note
+    }else if (enddomain ===  'it' || domain === "bmwroma.store" || domain === "www.bmwroma.store" || domain === "bmwtest.fdm-spa.com" || domain === "bmw.fdm-spa.com" || domain === "bmwmilano.store" || domain === "www.bmwmilano.store" ||  domain === "configure.bmw.it") {
+        s3load('s3s/bmw/it');
+    }else if (enddomain ===  'tr') {
+        s3load('s3s/bmw/tr');
+    }else if (enddomain ===  'uk') {
+        s3load('s3s/bmw/uk');
+    }else if (enddomain ===  'es') {
+        s3load('s3s/bmw/es');
+    }else if (enddomain ===  'de') {
+        s3load('s3s/bmw/de');
+    }
+}
+
+s3select();

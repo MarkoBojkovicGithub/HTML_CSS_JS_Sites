@@ -1,0 +1,550 @@
+body {
+    margin:0;
+    background-color: #DCDBE1;
+}
+
+/* Menu-classis */
+
+.menuHolder {
+    width:100%;
+    height: 100px;
+    background-color: #D20000;
+
+    display:flex;
+    flex-direction: row;
+
+}
+
+
+.menuHolder div[name="BllueMenu"] {
+    width:19%;
+    height: inherit;
+    background-color: #00236A;
+
+    position:relative;
+
+
+}
+
+div[name="MenuBlueShadow"] {
+    width:100%;
+    height: 70%;
+    background-image: linear-gradient(#00236A,#2c477c);
+
+    position:absolute;
+    top:-15%;
+    transform:skewY(-3deg);
+
+}
+
+
+
+/*Right Side*/
+
+.menuHolder div[name="RedMenu"] {
+    width:81%;
+    height: inherit;
+    background-color: #D20000;;
+
+    position:relative;
+}
+
+div[name="MenuRedShadow"] {
+    width:100%;
+    height: 54%;
+    background-image: linear-gradient(#D20000,rgb(190, 61, 61));
+
+    position:absolute;
+    top:-35%;
+    transform:skewY(-3deg);
+}
+
+div[name="ShadowPlacer"]{
+    position: absolute;
+    width:40%;
+    height: 70%;
+    background-image:linear-gradient(to right,rgba(0,0,0,0) ,#D20000 );
+
+    right:50%;
+}
+
+
+/* Components */
+
+
+.SkyText{
+    color:white;
+    position:absolute;
+    z-index:3;
+    top:-23%;
+    right:3%;
+
+    font-family: sans-serif;
+    font-size:45px;
+    font-weight: 700;
+}
+.SportText {
+    color:white;
+    position:absolute;
+    z-index:3;
+    top:-23%;
+    left:0.5%;
+
+    font-family: sans-serif;
+    font-size:45px;
+
+}
+
+.ShowScreen {
+    display:block;
+}
+.button-phone{
+    display:none;
+}
+
+/*Menu List*/
+
+.MenuList {
+    background-color:white;
+    width:100%;
+    height: 55px;
+}
+.BothSides {
+    background-color: transparent;
+    width:960px;
+    height: 55px;
+    position:relative;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+.MenuListHolder {
+    float:left;
+}
+.MenuListHolder ul {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+.MenuListHolder ul li {
+    display: inline-block;
+    float:left;
+}
+.MenuListHolder ul li a {
+    color:rgb(100, 99, 99);
+    padding-top:18px;
+    padding-bottom: 17px;
+    padding-left:20px;
+    padding-right:20px;
+    display:block;
+    background-color:white;
+    text-align: center;
+
+    text-decoration: none;
+    font-size:17px;
+    font-family: sans-serif;
+}
+.MenuListHolder ul li a:hover{
+    background-color: rgba(216, 216, 216, 1);
+    text-decoration: underline;
+}
+p[name="WatchText"] {
+    color:white;
+    font-family: sans-serif;
+    font-size:14px;
+}
+
+div[name="RedButton"]{
+    background-color: rgb(202, 28, 28);
+    width:150px;
+    height: 40px;
+    position:relative;
+    right:0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.ButtonHolder {
+    display:block;
+    position:absolute;
+    right:0;
+    margin-right:5px;
+}
+
+.mobile-menu {
+    display:none;
+}
+div[name="RedButton"]:hover {
+    background-color:rgb(206, 4, 4);}
+@media only screen and (max-width: 1440px) {
+        div[name="MenuBlueShadow"] {
+            height: 67%;
+        }
+            div[name="MenuRedShadow"] {
+                height: 40%;
+                top:-16%;
+            
+        }
+        .menuHolder div[name="BllueMenu"] {
+            width:28%;
+        }
+        div[name="MenuBlueShadow"] {
+            top:-5%;
+        }
+        .menuHolder div[name="RedMenu"] {
+            width:72%;
+        }
+        .MenuList {
+            background-color:white;
+            width:100%;
+            height: 55px;
+        }
+
+}
+@media only screen and (max-width: 1600px) {
+    div[name="MenuBlueShadow"] {
+        height: 67%;
+    }
+        div[name="MenuRedShadow"] {
+            height: 40%;
+            top:-20%;
+        
+    }
+    .menuHolder div[name="BllueMenu"] {
+        width:28%;
+    }
+    div[name="MenuBlueShadow"] {
+        top:-5%;
+    }
+    .menuHolder div[name="RedMenu"] {
+        width:72%;
+    }
+    .MenuList {
+        background-color:white;
+        width:100%;
+        height: 55px;
+
+    }
+ 
+}
+@media only screen and (max-width: 1366px) {
+
+}
+@media only screen and (max-width: 1920px) {
+    div[name="MenuRedShadow"] {
+        height: 40%;
+        top:-25%;
+    }
+    .menuHolder div[name="BllueMenu"] {
+        width:28%;
+    }
+    div[name="MenuBlueShadow"] {
+        top:-5%;
+    }
+    .menuHolder div[name="RedMenu"] {
+        width:72%;
+    }
+    .MenuList {
+        background-color:white;
+        width:100%;
+        height: 55px;
+    }
+    .SearchDiv {
+        right: -4.5% !important;
+    }
+}
+@media only screen and (max-width:1100px) and (min-width:600px) {
+    .menuHolder {
+        width:100%;
+        height: 80px;
+    }
+    .MenuList {
+        margin-bottom: 40px;
+    }
+
+    .BothSides {
+        background-color: transparent;
+        width:780px;
+    }
+    .menuHolder div[name="RedMenu"] {
+        width:85.5%;
+        height: 80px;
+
+    }
+    .menuHolder div[name="BllueMenu"] {
+        width:11.5%;
+        height: 80px;
+    
+    
+    }
+    .SkyText{
+        color:white;
+        position:absolute;
+        z-index:3;
+        top:-43%;
+        right:3%;
+    
+        font-family: sans-serif;
+        font-size:45px;
+        font-weight: 700;
+    }
+    .SportText {
+        color:white;
+        position:absolute;
+        z-index:3;
+        top:-43%;
+        left:0.5%;
+    
+        font-family: sans-serif;
+        font-size:45px;
+    
+    }
+    .GetSkySportsText {
+        color:white;
+        font-size:14px;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    div[name="MenuRedPlacer"] {
+        background-color: transparent;
+        width:60% !important;
+        height: 50px;
+        position:relative;
+        right: -1% !important;
+        top:15px !important;
+        
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+}
+
+@media only screen and (max-width:800px) {
+   
+    .menuHolder div[name="BllueMenu"] {
+        width:19%;
+        height: 60px;
+    
+    
+    }
+    .menuHolder div[name="RedMenu"] {
+        width:81%;
+        height: 60px;
+
+    }
+
+    .menuHolder {
+        width:100%;
+        height: 60px;
+    
+    }
+    .MenuList {
+        display: none;
+    }
+    .SkyText{
+        color:white;
+        position:absolute;
+        z-index:3;
+        top:-30%;
+        right:8%;
+
+        font-family: sans-serif;
+        font-size:30px;
+        font-weight: 700;
+    }
+
+    .SportText {
+        color:white;
+        position:absolute;
+        z-index:3;
+        top:-30%;
+        left:2%;
+
+        font-family: sans-serif;
+        font-size:30px;
+
+    }
+    .GetSkySportsText {
+        display: none;
+    }
+    .LogIn {visibility: hidden;}
+    .Search {display: none;}
+    .SearchPhoto {visibility: hidden;}
+    .SearchDiv {visibility: hidden;}
+
+    .ButtonHolder {
+        display:none;
+    }
+
+    .button-phone {
+        display:block;
+        color:white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        width:18%;
+        background-color: transparent;
+        margin-right:0.5%;
+     
+    }
+    .button-size {
+        font-size: 170px;
+        display: block;
+    
+    }
+    div[name="MenuRedShadow"] {
+        height: 70%;
+    }
+    .menuHolder div[name="BllueMenu"] {
+        width:22%;
+    }
+    .menuHolder div[name="RedMenu"] {
+        width:78%;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        width: 70%;
+        height: 400px;
+        background-color: transparent;
+        right:0;
+        display:none;
+      
+    }
+    .first-menu-item {
+        display:flex;
+        flex-direction: row;
+        padding-left:6%;
+        width:94% !important;
+        align-items: center;
+    }
+    
+    .mobiMenuList{
+        width:100%;
+        height: 47px;
+        background-color: rgb(240, 239, 239);
+        border-bottom: 1px solid rgb(202, 202, 202);
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .mobiMenuList:hover {
+        background-color: rgb(212, 209, 209);
+    }
+    .men-texu {
+        color:rgb(71, 71, 71);
+        font-size:16px;
+        font-family: sans-serif;
+        margin-left:7%;
+    }
+}
+
+
+@media only screen and (max-width:300px) {
+    .menuHolder div[name="BllueMenu"] {
+        width:30%;
+    }
+    .menuHolder div[name="RedMenu"] {
+        width:70%;
+    }
+}
+
+/*Menu Placer Buttons */
+
+div[name="MenuRedPlacer"] {
+    background-color: transparent;
+    width:40%;
+    height: 50px;
+    position:absolute;
+    right: 10%;
+    top:25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.GetSkySportsText {
+    color:white;
+    font-size:14px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.LogIn {
+    color:white;
+
+    margin-left:20px;
+    margin-right:10px;
+}
+
+.Search {
+    background-color: transparent;
+    border-radius: 3px;
+    position: absolute;
+    border:1px solid transparent;
+    width:204px;
+    height: 26px;
+    color:rgb(201, 197, 197);
+    padding-left:10px;
+
+}
+.Search::placeholder {
+  
+    color:rgb(201, 197, 197);
+}
+.Search:active {
+    border:1px solid black;
+}
+
+.SearchPhoto {
+    color:white;
+    position: relative;
+    right:3%;
+    font-size:30px;
+    margin-right:3px;
+}
+.SearchDiv {
+    background-color: transparent;
+    border-radius: 3px;
+    margin-left:30px;
+    position:relative;
+    right:-7.5%;
+    margin-right:auto;
+    border:1px solid rgb(201, 197, 197);
+    width:220px;
+    height: 30px;
+    color:rgb(201, 197, 197);
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.SearchDiv-Active {
+    background-color: white;
+    border-radius: 3px;
+    margin-left:30px;
+    border:1px solid rgb(201, 197, 197);
+    width:220px;
+    height: 30px;
+    color:rgb(201, 197, 197);
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position:relative;
+    right:-5.5%;
+    margin-right:auto;
+}

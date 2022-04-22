@@ -1,0 +1,296 @@
+
+.menuDivClass{
+    background-image: linear-gradient(to right,#153D7C,#C5122D);
+    background-attachment: fixed;
+    position: fixed;
+    padding-bottom: 10px;
+    left:0px;
+    top:0px;
+    width:100%;
+    height: 120px;
+    display:flex;
+    flex-direction: row;
+    z-index:4;
+}
+.menuLogoClass{
+    background-color: #181740;
+    width:24%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menuLogoClass:hover{
+    background-color: #222144;
+}
+.colorRed{
+    position: absolute;
+    top:8px;
+    left:22.8%;
+    background-color: #C5122D;
+    width:1.2%;
+    height: 0px;
+    transition-duration: 150ms;
+}
+.colorRedEffect{
+    position: absolute;
+    top:8px;
+    left:22.8%;
+    background-color: #C5122D;
+    width:1.2%;
+    height: 30px; /*effect 30*/
+    transition-duration: 150ms;
+}
+.colorBlue{
+    position: absolute;
+    top:107px;
+    left:0px;
+    background-color: #153D7C;
+    width:1.2%;
+    height: 0px;
+    transition-duration: 150ms;
+}
+.colorBlueEffect{
+    position: absolute;
+    top:60px;
+    left:0px;
+    background-color: #153D7C;
+    width:1.2%;
+    height: 47px;
+    transition-duration: 150ms;
+}
+.menuRightDivClass{
+    display:flex;
+    flex-direction: column;
+    width:76%;
+    min-width:0px;
+    background-color: blue;
+    height: 120px;
+}
+.menuightTopDivClass{
+    height: 49px;
+    width:100%;
+    background-color:#111025;
+    display:flex;
+    flex-direction: row;
+}
+.menuightTopDivClass_leftSide{
+    width:38.2%;
+    height: 49px;
+    background-color: #111025;
+    display: flex;
+    flex-direction: row;
+    padding-left:1.8%;
+    align-items: center;
+}
+.iconsColors{
+    color:#b3b3b3;
+    margin-left:4%;
+    font-size:21px;
+}
+.iconsColors:hover{
+    color:white;
+}
+.menuRightTopDiv_rightSide{
+    background-color: transparent;
+    width:61.8%;
+    height: 49px;
+}
+.menuRightTopDiv_rightSide2{
+    background-color: transparent;
+    width:70%;
+    height: 49px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menuRightTopDiv_rightSide2Part1{
+    float: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Link{
+    color:white;
+    text-decoration: none;
+    font-size:13px;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.menuRightTopDiv_rightSide2Part2{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.buttenDiv{
+    background-color: transparent;
+    height: 49px;
+    width:140px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left:22%;
+    float:none;
+    clear:both;
+
+}
+.buttonSpace{
+    background-image:linear-gradient(to right,rgb(214, 18, 18) 60%,rgb(226, 35, 35));
+    height: 34px;
+    width:140px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left:8%;
+    
+}
+.menuRightTopDiv_rightSide2Part3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    width:50px;
+    height: 49px;
+    margin-left:10%;
+    justify-content: center;
+}
+.menuRightTopDiv_rightSide2Part4{
+    width:36%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: end;
+}
+
+.buttonsDiv{
+    width:100%;
+    background-color: green;
+    height: 71px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttonDoIt{
+    width:15.5%;
+    height: 70px;
+    background-color: #181740;;
+    border: 1px solid rgba(120,120,120,0.2);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    cursor: pointer;
+}
+.buttonDoItText{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    font-size:15px;
+    font-weight: 600;
+    transition-duration: 250ms;
+}
+.row{
+    color:white;
+    font-size:10px;
+    margin-left:5px;
+    margin-bottom: 5px;
+    transition-duration: 250ms;
+}
+.Search{
+    color:gray;
+    width:7%;
+    height: 70px;
+    background-color: #181740;;
+    border: 1px solid rgba(120,120,120,0.2);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 250ms;
+}
+.Search:hover{
+    background-color: #252549;
+    transition-duration: 250ms;
+}
+.WhiteIt{
+    color:gray;
+    transition-duration: 250ms;
+}
+
+.MenuList{
+    background-color:#154284;
+    position:absolute;
+    width:140px;
+    height: 280px;
+    left:24%;
+    top:110px;
+    padding-left:20px;
+    padding-top:17px;
+}
+a.linkA{
+    margin-bottom: 17px;
+    font-family: sans-serif;
+    font-size:15px;
+    color:white;
+    font-weight: 700;
+    display: block;
+    letter-spacing: -1px;
+}
+a.linkB{
+    margin-bottom: 15px;
+    font-family: sans-serif;
+    font-size:13px;
+    color:white;
+    font-weight: 700;
+    display: block;
+    letter-spacing: -0.5px;
+}
+.linkB:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+a.linkA:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.LastMeni{
+    width:100%;
+    height: 300px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background-color: #111025;
+    padding-top:40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.LastMeniText{
+    width:10%;
+    height: 300px;
+    background-color: transparent;
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+
+}
+.LastTextMenu{
+    text-align: left;
+    font-family: sans-serif;
+    font-size:14px;
+    font-weight: 900;
+    color:rgb(241, 223, 60);
+    letter-spacing: -2px;
+    vertical-align: top;
+    margin-top:2px;
+    word-spacing: 2px;
+
+}

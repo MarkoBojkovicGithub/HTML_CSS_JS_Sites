@@ -1,0 +1,34 @@
+/**
+ * @settingValue pixieId for XandrProcessing aka AppNexus - if set, use pixie script instead of img/script tag
+ * @settingValue type if you want to use javascript instead of default img
+ * @settingValue args get params for url (id...)
+ * @settingValue url replacement for default adnxs urls
+ */
+( window.p15r = window.p15r || []).push({
+  processingId: 'XandrProcessing',
+  action: 'register',
+  callback: function (pid, paramObj, cfg) {
+    if (cfg["pixieId"]) {
+      !function (e, i) {
+        if (!e.pixie) {
+          var n = e.pixie = function (e, i, a) {
+            n.actionQueue.push({action: e, actionValue: i, params: a})
+          };
+          n.actionQueue = [];
+          processingWrapper.util.loadScript(cfg['url'] || "//acdn.adnxs.com/dmp/up/pixie.js", undefined, !0)
+        }
+      }(window, document);
+      pixie('init', cfg["pixieId"]);
+      pixie('event', 'PageView');
+    }
+    else {
+      if (cfg.type === 'javascript') {
+        processingWrapper.util.loadScript(cfg['url'] || 'https://secure.adnxs.com/px', undefined, !0, undefined, cfg['args'])
+      }
+      else {
+        processingWrapper.util.loadImage(cfg['url'] || 'https://secure.adnxs.com/px', cfg['args'])
+      }
+    }
+  },
+  isCentral: true
+})

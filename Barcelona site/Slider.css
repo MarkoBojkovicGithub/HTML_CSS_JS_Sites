@@ -1,0 +1,31 @@
+.SliderDiv{
+    width:101.6%;
+    height: 440px;
+    background-color: blue;
+    margin-top:122px;
+    position: relative;
+    left:-1%;
+    display: flex;
+    flex-direction: row;
+}
+.SliderDiv1{
+    width:20%;
+    height: 440px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.PhotoDivTex{
+    width:820px;
+    height: 200px;
+    top:240px;
+    background-image:linear-gradient(rgba(0,0,0,0),black);
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

@@ -1,0 +1,95 @@
+.Space{
+    width:95.6%;
+    height: 3000px;
+    background-color: #181733;;
+    position: relative;
+    margin-left:-1%;
+    margin-top:-1.5%;
+    z-index: 3;
+    padding: 0% 3%;
+}
+.Spons{
+    background-image: linear-gradient(#4C1025,#181733);
+    width:101.6%;
+    height: 100px;
+    position: relative;
+    margin-left: -1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top:3px;
+    padding-bottom: 15px;
+    z-index: 2;
+}
+.spon{
+    color:gray;
+    font-size:50px; margin-left:2%;
+}
+.spon:hover{
+    color:white;
+}
+.cards{
+    background-color: white;
+    width:100%;
+    height: 200px;
+    z-index: 1;
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    margin-top:-2%;
+}
+.cardYellow:hover{
+    transform: scale(1.12);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+.cardBlue:hover{
+    transform: scale(1.12);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+.cardYellow{
+    width:15%;
+    height: 120px;
+    background-color: #FDC62B;
+    border-radius: 12px;
+    margin:0% 0.47%;
+    transition-duration: 250ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardBlue{
+    width:15%;
+    height: 120px;
+    background-color: #1d5986;
+    border-radius: 12px;
+    margin:0% 0.47%;
+    transition-duration: 250ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsName{
+    width:100%;
+    height: 270px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.TextCard{
+    font-family:fantasy ;
+    color:blue;
+    font-size:28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: -2px;
+    margin-top:-2px;
+}

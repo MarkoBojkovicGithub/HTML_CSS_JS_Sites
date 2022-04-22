@@ -1,0 +1,10 @@
+.PageSite{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    width:101.2%;
+    margin-left:-0.6%;
+
+    overflow: hidden;
+  
+}

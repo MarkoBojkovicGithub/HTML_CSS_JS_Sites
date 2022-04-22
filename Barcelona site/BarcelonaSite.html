@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="BarcelonaSite.css">
+        <link rel="stylesheet" href="Menu.css">
+        <link rel="stylesheet" href="Slider.css">
+        <link rel="stylesheet" href="Space.css">
+        <link rel="stylesheet" href="SlideDiv.css">
+        <link rel="stylesheet" href="Store.css">
+        <link rel="stylesheet" href="Players.css">
+        <link rel="stylesheet" href="Footer.css">
+
+        <script src="https://kit.fontawesome.com/e90804f986.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <!-- Page -->
+        <div class="PageSite">
+            <!--menu  -->
+            <div class="menuDivClass" name ="menu">
+                <div class="menuLogoClass" name="menuLogo" onmouseenter="RedBShow()" onmouseleave="RedBShowN()">
+                    <img src="Photo/Barcelona-Logo.png" widht="50px" height="50px" style="position: relative; left:-8px;">
+                    <h2 style="position:relative; left:-20px; color:white; font-size:27px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">FC BARCELONA</h2>
+                    <div class="colorRed" name="RedDiv">
+
+                    </div>
+                    <div class="colorBlue" name="BlueDiv">
+
+                    </div>
+                </div>
+                <!--Right side-->
+                <div class="menuRightDivClass" name="menuRigthDiv">
+                    <div name="menuRightTopDiv" class="menuightTopDivClass">
+                        <div name="menuRightTopDiv_leftSide" class="menuightTopDivClass_leftSide">
+                            <p style="letter-spacing: -1px; color:#b3b3b3; font-size:10px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">FOLLOW FC BARCELONA</p>
+                            <<a style=" margin-left:1.5%;" href="https://chats.viber.com/fcbarcelona" target="_blank"><i class="fab fa-whatsapp iconsColors"></i></a>
+                            <<a style=" margin-left:1.5%;"  href="https://twitter.com/fcbarcelona" target="_blank"> <i  class="fab fa-twitter iconsColors"></i></a>
+                            <<a style=" margin-left:1.5%;" href="https://www.facebook.com/fcbarcelona" target="_blank"> <i class="fab fa-facebook-square iconsColors"></i></a>
+                            <<a style=" margin-left:1.5%;" href="https://www.instagram.com/accounts/login/" target="_blank"> <i  class="fab fa-instagram iconsColors"></i></a>
+                            <<a style=" margin-left:1.5%;" href="https://www.youtube.com/user/fcbarcelona" target="_blank"> <i  class="fab fa-youtube iconsColors"></i></a>
+                            <a style=" margin-left:3.5%;" href="https://www.tiktok.com/@fcbarcelona target="_blank"> <i class="fas fa-align-right iconsColors"></i></a>
+                            <<a style=" margin-left:1.5%;" href="https://www.twitch.tv/fcbarcelona" target="_blank"> <i class="fas fa-backspace iconsColors"></i></a>
+                        </div>
+                        <div name="menuRightTopDiv_rightSide" class="menuRightTopDiv_rightSide">
+                            <div name="menuRightTopDiv_rightSide2" class="menuRightTopDiv_rightSide2">
+                                <div class="menuRightTopDiv_rightSide2Part1">
+                                    <i style="margin-right:9%; color:rgb(194, 189, 189); font-size:16px; " class="far fa-user"></i>
+                                    <a class="Link" href="">Login</a>
+                                </div>
+                                <div class="menuRightTopDiv_rightSide2Part2">
+                                   <div class="buttenDiv">
+                                        <div class="buttonSpace">
+                                            <i style="color:white;" class="fas fa-align-center"></i>
+                                            <p style="color:white; margin-left:4%; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:13px; font-weight: 700;">Become A Cule</p>
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="menuRightTopDiv_rightSide2Part3">
+                                    <p style="color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:13.5px;">EN</p>
+                                    <i style='color:white; font-size:8px; margin-left:5px;' class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="menuRightTopDiv_rightSide2Part4">
+                             
+                                        <p style="color:white;" >All barca sites</p>
+                                        <i style="color:white; margin:0% 5%; margin-top:2px; font-size:15px;" class="fas fa-align-center"></i>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttonsDiv">
+                        <div onmouseenter="ColorUp(0,1,1);" onmouseleave="ColorUpDown(1)" style="display: none;" id="menuList1" class="MenuList">
+                            <a class="linkA">Latest</a>
+                            <a class="linkA">Shuedule</a>
+                            <a class="linkA">Results</a>
+                            <a class="linkA">Standings</a>
+                            <a class="linkA">Players</a>
+                            <a class="linkA">Photos</a>
+                            <a class="linkA">Honours</a>
+                            <a class="linkA">Features</a>
+                            
+                        </div>
+                        <div id="menuList2"  style="display:none;  position: absolute; left:25%; background-color: red; width:460px; height: 290px; top:110px;" onmouseenter="ColorUp(2,3,2);" onmouseleave="ColorUpDown(2)">
+                            <div  style="display: block; position:absolute; top:0px; padding-top:17px; height: 272px; left:0px; width:210px;" id="menuList1" class="MenuList">
+                                <a class="linkA">Football</a>
+                                <a class="linkA">VIP Football</a>
+                                <a class="linkA">Barcaland</a>
+                                <a class="linkA">Tour ^ Museum</a>
+                                <a class="linkA">Basketball</a>
+                                <a class="linkA">VIP Basketball</a>
+                                <a class="linkA">FC Barcelona women</a>
+                                <a class="linkA">Barca</a>
+                                
+                            </div>
+                            <div  style="display: block; position:absolute; top:0px; padding-top:16px; height: 273px; left:230px; width:210px;" id="menuList1" class="MenuList">
+                                <a class="linkA">Hendball</a>
+                                <a class="linkA">Futsal</a>
+                                <a class="linkA">Rolley-Hocker</a>
+                                <a class="linkA">Ice Rink</a>
+                                <a class="linkA">Packs and promotions</a>
+                                <a class="linkA">All about tickets</a>
+                                <a class="linkA">Comparate: Virtual expiriance</a>
+                                <a class="linkA">New Barca cafe</a>
+                                
+                            </div>
+                        </div>
+                        <div id="menuList4"  onmouseenter="ColorUp(6,7,4);" onmouseleave="ColorUpDown(4)"style="position:absolute; left:58%; display: none; width:178px; height: 172px;" id="menuList1" class="MenuList">
+                            <a class="linkA">Subscribe</a>
+                            <a class="linkA">What is culer</a>
+                            <a class="linkA">Draws</a>
+                            <a class="linkA">Go</a>
+                            <a class="linkA">Barca TV+</a>
+                        
+                            
+                        </div>
+                        <div onmouseenter="ColorUp(8,9,5);" onmouseleave="ColorUpDown(5)"" id="menuList5"  style="display:none;  position: absolute; left:60%; background-color: red; width:460px; height: 420px; top:110px;" onmouseenter="ColorUp(2,3,2);" onmouseleave="ColorUpDown(2)">
+                            <div  style="display: block; position:absolute; top:0px; padding-top:17px; height: 410px; left:0px; width:210px;" id="menuList1" class="MenuList">
+                                <a class="linkA">Latest</a>
+                                <a class="linkA">Culers</a>
+                                <a class="linkA">Kids</a>
+                                <a class="linkA">Espai Barca</a>
+                                <a class="linkA">Shuedule</a>
+                                <a class="linkA">Members</a>
+                                <a class="linkA">More</a>
+                                <a class="linkA">Indenitify</a>
+                                <a class="linkA">Kids</a>
+                                <a class="linkA">Partners</a>
+                                <a class="linkA">History</a>
+                                <a class="linkA">Barca Foundation</a>
+                                <a class="linkA">Barca Academi</a>
+                                
+                            </div>
+                            <div  style="display: block; position:absolute; top:0px; padding-top:16px; height: 410px; left:230px; width:210px;" id="menuList1" class="MenuList">
+                           
+                                <a class="linkA">Barca inovation Hub</a>
+                                <a class="linkA">La Masia</a>
+                                <a class="linkA">Documentation center</a>
+                                <a class="linkA">Barca events</a>
+                                <a class="linkA">Transparency and compiance</a>
+                                <a class="linkA">Organisation</a>
+                                <a class="linkA">Sporting menagment</a>
+                                <a class="linkA">Go</a>
+                                <a class="linkA">Facilities</a>
+                                <a class="linkA">Services</a>
+                                <a class="linkA">Contact</a>
+                                
+                            </div>
+                        </div>
+                        <div style="padding-top:0px; background-color:blue; display:none; position:absolute; left:0px; top:120px; width:100%; height: 300px;"" onmouseenter="ColorUp(10,11,6);" onmouseleave="ColorUpDown(6)"" id="menuList6" >
+                        <div  class="LastMeni">
+                            <div style="margin-right:4.5%;" class="LastMeniText">
+                                <p style='font-size:19px; margin-top:-4px;' class="LastTextMenu">Barca Tems</p>
+                  
+                            </div>
+                            <div class="LastMeniText">
+                                <p class="LastTextMenu">FOOTBALL</p>
+                                <a class="linkB">First Team</a>
+                                <a class="linkB">Womens</a>
+                                <a class="linkB">Barca B</a>
+                                <a class="linkB">FC Barcelona U19a</a>
+                                <a class="linkB">Barca Legends</a>
+                                <a class="linkB">Barca</a>
+                                <a class="linkB">Barca Genuine F</a>
+                                <a class="linkB">Summer camp</a>
+                            </div>
+                            <div class="LastMeniText">
+                                <p class="LastTextMenu">BASKETBALL</p>
+                                <a class="linkB">First Team</a>
+                            </div>
+                            <div class="LastMeniText">
+                                <p class="LastTextMenu">HANDBALL</p>
+                                <a class="linkB">First Team</a>
+                            </div>
+                            <div class="LastMeniText">
+                                <p class="LastTextMenu">FUTSAL</p>
+                                <a class="linkB">First Team</a>
+                            </div>
+                            <div class="LastMeniText">
+                                <p class="LastTextMenu">ROLLER HOCKY</p>
+                                <a class="linkB">First Team</a>
+                            </div>
+                            <div class="LastMeniText">
+                                <p class="LastTextMenu">E SPORTS</p>
+                                <a class="linkB">eFoodball Pess</a>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="buttonDoIt"  onmouseenter="ColorUp(0,1,1)" onmouseleave="ColorUpDown(1)">
+                            <p name="ColorIt" class="buttonDoItText" >FIRST TEAM</p>
+                            <i  name="ColorIt" class="fas fa-sort-down row"></i>
+                        </div>
+                        <div class="buttonDoIt"  onmouseenter="ColorUp(2,3,2)" onmouseleave="ColorUpDown(2)">
+                            <p  name="ColorIt" class="buttonDoItText" >TICKETS</p>
+                            <i  name="ColorIt"  class="fas fa-sort-down row"></i>
+                        </div>
+                        <div class="buttonDoIt"  onmouseenter="ColorUp(4,5,3)" onmouseleave="ColorUpDown(3)">
+                            <p name="ColorIt" class="buttonDoItText">SHOP</p>
+                            <i   name="ColorIt" class="fas fa-sort-down row"></i>
+                        </div>
+                        <div class="buttonDoIt"  onmouseenter="ColorUp(6,7,4)" onmouseleave="ColorUpDown(4)">
+                            <p name="ColorIt" class="buttonDoItText" >CULERS</p>
+                            <i  name="ColorIt" class="fas fa-sort-down row"></i>
+                        </div>
+                        <div class="buttonDoIt"  onmouseenter="ColorUp(8,9,5)" onmouseleave="ColorUpDown(5)">
+                            <p name="ColorIt" class="buttonDoItText" >CLUB</p>
+                            <i name="ColorIt"  class="fas fa-sort-down row"></i>
+                        </div>
+                        <div class="buttonDoIt"  onmouseenter="ColorUp(10,11,6)" onmouseleave="ColorUpDown(6)">
+                            <p name="ColorIt" class="buttonDoItText" >BARCA TEAM</p>
+                            <i  name="ColorIt" class="fas fa-sort-down row"></i>
+                        </div>
+                        <div class="Search">
+                            <i style="color:white; font-size:24px;" class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                 <!--Right side-->
+            </div>
+             <!--menu  -->
+             <!-- Slider-->
+            <div class="SliderDiv">
+                <div style="width:60%;" id="FirstDiv" name="PhotoDiv" onmouseenter="FirstShow()" onmouseleave="FirstShow2()" class="SliderDiv1">
+                    <img id="Photo1Div" src="Photo/Forth.jpg" width="850px" height="500px">
+                    <div id="DivTextColor" class="PhotoDivTex">
+                        <p id="textShow11" style="margin-bottom:10px; letter-spacing: -1px; text-align: center; font-weight:900; font-size:27px; color:white; font-family: sans-serif;">A very special season at Camp <br> Nou</p>
+                        <p id="textShow1" style=" margin:0px 0px; letter-spacing: -0.5px; font-family:sans-serif; text-align: center; font-size:14px; color:white;">The return of the traditional open door training season s a fevrent <br> atmosphere in the stedium</p>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        
+                            <div style="background-color: yellow; width:8px; height: 8px;">
+
+                            </div>
+                            <p style=" margin-left:5px; font-family: sans-serif; font-weight: bold; color:yellow; font-size:11px;">FIRST TEAM</p>
+                            <i style="margin-left:10px; color:white; font-size:11px;" class="far fa-clock"></i>
+                            <p style=" margin-left:5px; font-family: cursive; font-weight: bold; color:white; font-size:11px;">21 hrs ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="SecondDiv" name="PhotoDiv" onmouseenter="SecondShow()" onmouseleave="SecondShow2()" style="background-color: red;" class="SliderDiv1">
+                    <img id="Photo2Div" src="Photo/Third.jpg" width="650px" height="440px">
+                    <div style="width:280px;" id="DivTextColor2" class="PhotoDivTex">
+                        <p id="textShow22" style="margin-bottom:10px; margin-top: 87px; letter-spacing: -1px; text-align: center; font-weight:900; font-size:15px; color:white; font-family: sans-serif;">Barsa squad for copa del Red <br> debat</p>
+                        <p id="textShow2" style="display:none; margin:0px 0px; letter-spacing: -0.5px; font-family:sans-serif; text-align: center; font-size:14px; color:white;">Messi reterns after testing  negative for covid-19 in a PCR test with <br>Dani Alves also included after receaving  conformition of his </p>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        
+                            <div style="background-color: yellow; width:8px; height: 8px;">
+
+                            </div>
+                            <p style=" margin-left:5px; font-family: sans-serif; font-weight: bold; color:yellow; font-size:11px;">FIRST TEAM</p>
+                            <i style="margin-left:10px; color:white; font-size:11px;" class="far fa-clock"></i>
+                            <p style=" margin-left:5px; font-family: cursive; font-weight: bold; color:white; font-size:11px;">22 hrs ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="ThirdDiv" name="PhotoDiv" onmouseenter="ThirdShow()" onmouseleave="ThirdShow2()"  class="SliderDiv1">
+                    <img id="Photo3Div" src="Photo/Fifth.jpg" width="650px" height="440px">
+                    <div style="width:280px;" id="DivTextColor3" class="PhotoDivTex">
+                        <p id="textShow33" style="margin-bottom:10px; margin-top: 87px; letter-spacing: -1px; text-align: center; font-weight:900; font-size:15px; color:white; font-family: sans-serif;">The match day challenge <br>is on</p>
+                        <p id="textShow3" style="display:none; margin:0px 0px; letter-spacing: -0.5px; font-family:sans-serif; text-align: center; font-size:14px; color:white;">Take part in our match Day challange is witch you can coplete <br>agains cullers to win fantastic prize </p>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        
+                            <div id="text31" style=" background-color: yellow; width:8px; height: 8px;">
+
+                            </div>
+                            <p id="text32" style="  margin-left:5px; font-family: sans-serif; font-weight: bold; color:yellow; font-size:11px;">FIRST TEAM</p>
+                            <i id="text33" style=" margin-left:10px; color:white; font-size:11px;" class="far fa-clock"></i>
+                            <p id="text34" style="  margin-left:5px; font-family: cursive; font-weight: bold; color:white; font-size:11px;">22 hrs ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Slider-->
+             <!--Spons -->
+             <div class="Spons">
+                <p style="color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:12px; font-weight: 600;" >MAIN PANTNERS</p>
+                <i style="border-left:2px solid rgba(150,150,150,0.3);  padding-left:2%; " class="spon far fa-futbol"></i>
+                <i class="fas fa-baseball-ball spon"></i>
+                <i  class="fas fa-basketball-ball spon"></i>
+                <i  class="fas fa-align-center spon"></i>
+             </div>
+               <!--Spons -->
+             <!--Space -->
+            <<div class="Space">
+                <div class="cardsName">
+                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;"">
+                        <h1 style=" padding-top:1%; background-image:linear-gradient(to right, #9b1c1c,#292680); -webkit-background-clip: text; -webkit-text-fill-color: transparent;  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:33px; font-weight: 1000;">GIFT BARCA THIS CRISTMASS!</h1>
+                    </div>
+                    <div class="cards">
+                        <div class="cardYellow">
+                            <h1 class="TextCard">ONLINE</h1>
+                            <h1 class="TextCard">STORE</h1>
+                        </div>
+                        <div class="cardBlue">
+                            <h1  style="color:yellow;" class="TextCard">FOOTBALL</h1>
+                            <h1 style="color:yellow;"  class="TextCard">TICKET</h1>
+                        </div>
+                        <div class="cardYellow">
+                            <h1 class="TextCard">BARCALAND</h1>
+                            <h1 class="TextCard">NADAL</h1>
+                        </div>
+                        <div class="cardBlue">
+                            <h1 style="color:yellow;"  class="TextCard">CULERS</h1>
+                            <h1 style="color:yellow;"  class="TextCard">PREMIUM</h1>
+                        </div>
+                        <div style="background-color:#D0122B" class="cardBlue">
+                            <h1 style="font-size:11px;  color:yellow;" class="TextCard">PALAU & JOHAN</h1>
+                            <h1 style="font-size:11px; margin-top:1px; margin-bottom: 1px; color:yellow;" class="TextCard">TICKETS FOR FAMILIES</h1>
+                            <div style="display:flex; flex-direction: row;">
+                                <h1 style="font-size:35px;  color:yellow;" class="TextCard">25%</h1>
+                                <h1 style=" margin-top:13px; margin-left:10px;  font-size:20px;  color:yellow;" class="TextCard">DTE.</h1>
+                            </div>
+                        </div>
+                        <div style="background-image: linear-gradient( #151527 ,#9b1c1c);"" class="cardBlue">
+                            <i style="color:yellow; font-size:50px; margin-top:-20px; "" class="fas fa-hand-holding"></i>
+                            <h1 style=" letter-spacing:2px; font-size:23px; margin-top:1px; margin-bottom: 1px; color:yellow;" class="TextCard">SEE ALL</h1>
+                        </div>
+                    </div>
+                </div>
+                 <!--Slider-->
+                <div class="SliderDivSpace">
+                    <div class="MatchDiv">
+                        <div style="z-index:2; background-color: #181733; width:3%; height: 450px; position:absolute; left:-0.1%; top:15%;">
+
+                        </div>
+                        <!--
+                        <div style="z-index:2; background-color: #181733; width:3%; height: 450px; position:absolute; left:97.1%; top:15%;">
+
+                        </div>
+                    -->
+                        <div class="MatchText">
+                            <div style=" margin-left:5px; display:flex; flex-direction:row; justify-content: center; align-items: center; background-image: linear-gradient(to right, #9b1c1c,#292680); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                                <p style="font-size:30px; font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;  font-weight: 800;">Barca First Team</p>
+                                <p style="margin-top:35px; margin-left:8px ; font-size:32px; font-family:sans-serif; letter-spacing: 2px; font-weight: 400;">Match</p>
+                            </div>
+                            <div class="timeIs">
+                                <div style="z-index:1;" class="time1">
+                                    <p style="margin-bottom:5px; font-weight: bolder; color:black; font-size:12px; font-style:italic; font-family: sans-serif;">NEXT MATCH</p>
+                                    <p id="timeText"style="word-spacing: -10px; margin-left:18px; font-size:40px; font-family: sans-serif; font-weight: 900; background-image:linear-gradient(to right,rgb(202, 28, 28),#154284); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">00 : 00 : 00 :00</p>
+                                </div>
+                                <div style="z-index:2; position:relative; top:-17px; background-color: transparent; height: 30px; justify-content: end; align-items: flex-start;" class="time1">
+                                    <p style="margin-right:-2px;" class="textTimeIs">DAYS</p>
+                                    <p style="margin-right:2px; "class="textTimeIs">HOURS</p>
+                                    <p class="textTimeIs">MINS</p>
+                                    <p style="margin-right: 52px;"  class="textTimeIs">SEEC</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div id="SliderD" class="MatchesCards">
+
+                            <div class="PHoto1">
+
+                            </div>
+                            <div  class="Photo1Cover">
+                                <p style="margin:0px; font-size:35px;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:white;" >View all</p>
+                                <p style=" font-weight: 800; margin:0px;  margin-left:2px; font-size:33px;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:white;" >Results</p>
+                            </div>
+                            <!-- Cards -->
+                            <div style="margin-left:0.85%;" class="CardMatch">
+                                <div class="Header">
+                                    <div class="Header1">
+                                        <h2 style=" letter-spacing: -1px; margin-bottom: 22px; color:white; font-family: sans-serif; font-size:34px;">21</h2>
+                                    </div>
+                                    <div class="Header2">
+                                        <h3 style="letter-spacing: -2px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px; margin-bottom:-2px; color:white; font-size:17px; font-weight: 900;">THUESDAY</h3>
+                                        <h3 style="letter-spacing: 0.5px; text-align: left; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px;color:white; font-size:15px;">DECEMBER</h3>
+                                    </div>
+                                </div>
+                                <div class="MiddleCard">
+                                    <div class="Liga">
+                                        <img src="Photo/LA.png" width="65px" height="20px">
+                                       
+                                    </div>
+                                    <div style="background-color: transparent; display: flex; flex-direction: row; justify-content: center; align-items: center; width:100%; height: 15px;">
+                                        <p style="color:gray; font-size:10px;">90`+7</p>
+                                    </div>
+                                    <div class="resultClass">
+                                        <img style="margin-left:9%;" src="Photo/sevilja.png" width="45px" height="52px">
+                                        <div class="resultIs2" >
+                                            <p style="color:white; font-size:35px; font-weight: 900; font-family: monospace; letter-spacing: -2px;">1-1 </p>
+                                        </div>
+                                        <img src="Photo/Barcelona-Logo.png" width="100px" height="68px">
+                                    </div>
+                                    <div class="teams">
+                                        <p style="font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Sevilla</p>
+                                        <p class="vLine" style="font-size:12px; font-family:Verdana, Geneva, Tahoma, sans-serif;">v</p>
+                                        <p style=" margin-left:5px; font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Fc Barcelona</p>
+                              </div>
+                                    <div style="margin-top:0px; margin-top:3px;" class="teams">
+                                        <p style="font-size:11px; color:gray; font-family: serif;">Ramon Sanches Pizjuan</p>
+                                    </div>
+                                   
+                                </div>
+                                <div style="margin-top:1px solid gray; width:100%; height: 70px; background-color: white; display: flex; flex-direction: row; justify-content: center; align-items: center;"> 
+                                    <div id="Barsa1" onmouseleave="pushBarca11()" onmouseenter="pushBarca1()" style="position:relative; margin-right:5px; background-image: linear-gradient(to right,rgb(180, 3, 3),rgb(10, 10, 161)); width:140px; height: 30px ; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                     <div class="buttonBarsa">
+                                         <p style="font-size:10px; font-family: sans-serif; font-weight: 700; color:white;">BARCA TV+</p>
+                                     </div>
+                                     </div>
+                                     <div id="Barsa2" onmouseleave="pushBarca22()"  onmouseenter="pushBarca2()"  style="width:140px; height: 30px; margin-left:5px" class="buttonBarsa2">
+                                         <p style="font-size:10px; font-family: sans-serif; font-weight: 700; color:white; letter-spacing: -1px; word-spacing: 1px;">FULL MATCH REPORT</p>
+                                     </div>
+                                 </div>
+                            </div>
+                            <div class="CardMatch">
+                                <div class="Header">
+                                    <div class="Header1">
+                                        <h2 style=" letter-spacing: -1px; margin-bottom: 22px; color:white; font-family: sans-serif; font-size:34px;">02</h2>
+                                    </div>
+                                    <div class="Header2">
+                                        <h3 style="letter-spacing: -2px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px; margin-bottom:-2px; color:white; font-size:17px; font-weight: 900;">SUNDAY</h3>
+                                        <h3 style="letter-spacing: 0.5px; text-align: left; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px;color:white; font-size:15px;">JANUARY</h3>
+                                    </div>
+                                </div>
+                                <div class="MiddleCard">
+                                    <div class="Liga">
+                                        <img src="Photo/LA.png" width="65px" height="20px">
+                                       
+                                    </div>
+                                    <div style="background-color: transparent; display: flex; flex-direction: row; justify-content: center; align-items: center; width:100%; height: 15px;">
+                                        <p style="color:gray; font-size:10px;">90`+7</p>
+                                    </div>
+                                    <div class="resultClass">
+                                        <img style="margin-left:9%;" src="Photo/Malorca.png" width="45px" height="52px">
+                                        <div class="resultIs2" >
+                                            <p style="color:white; font-size:35px; font-weight: 900; font-family: monospace; letter-spacing: -2px;">0-1 </p>
+                                        </div>
+                                        <img src="Photo/Barcelona-Logo.png" width="100px" height="68px">
+                                    </div>
+                                    <div class="teams">
+                                        <p style="font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Mallorca</p>
+                                        <p class="vLine" style="font-size:12px; font-family:Verdana, Geneva, Tahoma, sans-serif;">v</p>
+                                        <p style=" margin-left:5px; font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Fc Barcelona</p>
+                                  </div>
+                                    <div style="margin-top:0px; margin-top:3px;" class="teams">
+                                        <p style="font-size:11px; color:gray; font-family: serif;">Son Moix</p>
+                                    </div>
+                                   
+                                </div>
+                                <div style="margin-top:1px solid gray; width:100%; height: 70px; background-color: white; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                   <div id="Barsa3" onmouseleave="pushBarca33()"   onmouseenter="pushBarca3()" style="position:relative; margin-right:5px; background-image:linear-gradient(to right,rgb(180, 3, 3),rgb(10, 10, 161)); width:140px; height: 30px ; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                    <div class="buttonBarsa">
+                                        <p style="font-size:10px; font-family: sans-serif; font-weight: 700; color:white;">BARCA TV+</p>
+                                    </div>
+                                    </div>
+                                    <div id="Barsa4" onmouseleave="pushBarca44()"   onmouseenter="pushBarca4()" style="width:140px; height: 30px; margin-left:5px" class="buttonBarsa2">
+                                        <p style="font-size:10px; font-family: sans-serif; font-weight: 700; color:white; letter-spacing: -1px; word-spacing: 1px;">FULL MATCH REPORT</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:17%;" class="CardMatch">
+                                <div style="background-color:#090F22;" class="Header">
+                                    <div style="margin-left:-3.5%;" class="Header1">
+                                        <h2 style=" letter-spacing: -1px; margin-bottom: 22px; color:white; font-family: sans-serif; font-size:34px;">05</h2>
+                                    </div>
+                                    <div class="Header2">
+                                        <h3 style="letter-spacing: -2px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px; margin-bottom:-2px; color:white; font-size:17px; font-weight: 900;">WEDNASDAY</h3>
+                                        <h3 style="letter-spacing: 0.5px; text-align: left; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px;color:white; font-size:15px;">JANUARY</h3>
+                                    </div>
+                                </div>
+                                <div style="overflow:hidden; " class="MiddleCard">
+                                    <div style="left:-1.5%; position:relative;" class="Liga">
+                                        <img src="Photo/LA.png" width="65px" height="20px">
+                                       
+                                    </div>
+                                    <div style="background-color: transparent; display: flex; flex-direction: row; justify-content: center; align-items: center; width:100%; height: 15px;">
+                                        <p style="color:gray; font-size:10px;">Kickoff CET</p>
+                                    </div>
+                                    <div class="resultClass">
+                                        <img style="margin-left:16%; margin-right:1%;" src="Photo/Linares.png" width="85px" height="75px">
+                                        <div style="margin-left:5%;" class="resultIs22" >
+                                            <p style="color:white; font-size:43px; font-weight: 900; font-family: sans-serif; letter-spacing: -2px;">18:30 </p>
+                                        </div>
+                                        <img style="margin-right:10%;" src="Photo/Barcelona-Logo.png" width="155px" height="97px">
+                                    </div>
+                                    <div class="teams">
+                                        <p style="font-weight:bold; letter-spacing:-2px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Linares Deportivo</p>
+                                        <p class="vLine" style="font-size:12px; font-family:Verdana, Geneva, Tahoma, sans-serif;">v</p>
+                                        <p style=" margin-left:5px; font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Fc Barcelona</p>
+                              </div>
+                                    <div style="margin-top:0px; margin-top:3px;" class="teams">
+                                        <p style="font-size:11px; color:gray; font-family: serif;">Ested'o Municiap de Linare</p>
+                                    </div>
+                                   
+                                </div>
+                                
+                            </div>
+                            <div class="CardMatch">
+                                <div style="background-color: #090F22;" class="Header">
+                                    <div class="Header1">
+                                        <h2 style=" letter-spacing: -1px; margin-bottom: 22px; color:white; font-family: sans-serif; font-size:34px;">08</h2>
+                                    </div>
+                                    <div class="Header2">
+                                        <h3 style="letter-spacing: -2px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px; margin-bottom:-2px; color:white; font-size:17px; font-weight: 900;">SATURDAY</h3>
+                                        <h3 style="letter-spacing: 0.5px; text-align: left; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px;color:white; font-size:15px;">JANUARY</h3>
+                                    </div>
+                                </div>
+                                <div class="MiddleCard">
+                                    <div class="Liga">
+                                        <img src="Photo/LA.png" width="65px" height="20px">
+                                       
+                                    </div>
+                                    <div style="background-color: transparent; display: flex; flex-direction: row; justify-content: center; align-items: center; width:100%; height: 15px;">
+                                        <p style="color:gray; font-size:10px;">Kickoff CET</p>
+                                    </div>
+                                    <div class="resultClass">
+                                        <img style="margin-left:9%; margin-right:3%;" src="Photo/granada.png" width="45px" height="52px">
+                                        <div style="margin-left:2%;" class="resultIs22" >
+                                            <p style="color:white; font-size:38px; font-weight: 900; font-family: sans-serif; letter-spacing: -2px;">18:30 </p>
+                                        </div>
+                                        <img src="Photo/Barcelona-Logo.png" width="100px" height="68px">
+                                    </div>
+                                    <div class="teams">
+                                        <p style="font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Granada</p>
+                                        <p class="vLine" style="font-size:12px; font-family:Verdana, Geneva, Tahoma, sans-serif;">v</p>
+                                        <p style=" margin-left:5px; font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">Fc Barcelona</p>
+                              </div>
+                                    <div style="margin-top:0px; margin-top:3px;" class="teams">
+                                        <p style="font-size:11px; color:gray; font-family: serif;">Nueva Los Darmene</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="CardMatch">
+                                <div style="background-color: #090F22;" class="Header">
+                                    <div class="Header1">
+                                        <h2 style=" letter-spacing: -1px; margin-bottom: 22px; color:white; font-family: sans-serif; font-size:34px;">12</h2>
+                                    </div>
+                                    <div class="Header2">
+                                        <h3 style="letter-spacing: -2px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px; margin-bottom:-2px; color:white; font-size:17px; font-weight: 900;">WEDNASDAY</h3>
+                                        <h3 style="letter-spacing: 0.5px; text-align: left; font-family: Verdana, Geneva, Tahoma, sans-serif; margin:-1px 0px;color:white; font-size:15px;">JANUARY</h3>
+                                    </div>
+                                </div>
+                                <div class="MiddleCard">
+                                    <div class="Liga">
+                                        <img src="Photo/LA.png" width="65px" height="20px">
+                                       
+                                    </div>
+                                    <div style="background-color: transparent; display: flex; flex-direction: row; justify-content: center; align-items: center; width:100%; height: 15px;">
+                                        <p style="color:gray; font-size:10px;">Kickoff</p>
+                                    </div>
+                                    <div class="resultClass">
+                                        <img style="margin-left:4%;" src="Photo/Barcelona-Logo.png" width="100px" height="68px">
+                                        <div style="margin-left:2%;" class="resultIs22" >
+                                            <p style="color:white; font-size:38px; font-weight: 900; font-family: sans-serif; letter-spacing: -2px;">07:30 </p>
+                                        </div>
+                                     
+                                        <img style="margin-left:3%; margin-right:3%;" src="Photo/aaa.png" width="105px" height="52px">
+                                    </div>
+                                    <div class="teams">
+                                        <p style="font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">FC Barcelona</p>
+                                        <p class="vLine" style="font-size:12px; font-family:Verdana, Geneva, Tahoma, sans-serif;">v</p>
+                                        <p style=" margin-left:5px; font-weight:bold; letter-spacing:-1px; font-size:18px; font-family:Verdana, Geneva, Tahoma, sans-serif;">R Madrid</p>
+                              </div>
+                                    <div style="margin-top:0px; margin-top:3px;" class="teams">
+                                        <p style="font-size:11px; color:gray; font-family: serif;">Ramon Sanches Pizjuan</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div style="position:relative; left:-10.5%; " class="PHoto1">
+
+                            </div>
+                            <div style="position:relative; left:-20.6%;" class="Photo1Cover">
+                                <p style="margin:0px; font-size:35px;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:white;" >View all</p>
+                                <p style=" font-weight: 800; margin:0px;  margin-left:2px; font-size:33px;  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:white;" >Fixtures</p>
+                            </div>
+                   
+
+                            <!--  Cards -->
+                        
+                        
+                            
+                      
+                        </div>
+                        <div class="SliderButtons">
+                            <div id="FirstButton" name="ButtonName" onclick="FirstSlider()" class="button">
+
+                            </div>
+                            <div id="SecondButton" name="ButtonName" onclick="SecondSlider()" style="margin-left:3%; background-color:red;" class="button">
+
+                            </div>
+                            <div id="ThirdButton" name="ButtonName" onclick="ThirdSlider()" style="margin-left:3%;" class="button">
+
+                            </div>
+                           
+                        </div>
+                    </div>
+                   
+                </div>
+                <!--Slider-->
+                 <!-- Store-->
+                 <div style="display:flex; flex-direction: column; background-color:white; width:100%; height: 490px;">
+                    <div style="display:flex; flex-direction: row; width:100%; height: 110px;">
+
+                        <div style=" background-color:white; width:60.6%; height: 110px; display: flex;flex-direction: row; justify-content: flex-end; align-items: center;">
+                            <h1 style="color:rgb(192, 57, 23); font-family: sans-serif; letter-spacing: -2px; font-weight: 900;">BARCA STORE CN</h1>
+                        </div>
+                        <div style="background-color:white; width:39.4%; height: 110px; display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-end;">
+                           <div id="storeColor" onmouseenter="colorStore()" onmouseleave="colorStore2()"  style="cursor:pointer; margin-right:20px; margin-bottom:15px; width:150px; height:30px; background-color: #154284; border-radius: 2px; display:flex;flex-direction: row; justify-content: center; align-items: center;"><p style="font-size:11.5px; color:white; font-family: sans-serif; ">OFFICIAL STORE CN</p></div>
+                        </div>
+                    </div>
+                    <div style="margin:0 1%; flex-direction: row; display: flex; width:98%; height: 320px; background-color: white;">
+                        <div class='storeIs'>
+                            <div style="z-index:1; display: flex; justify-content: center; align-items: center;">
+                                <img style="position: absolute; left:-30px; top:0px;" src="Photo/store1.jpg" width="440px" height="160px">
+                            </div>
+                            <div class="BottomDiv">
+                                <img src="Photo/kit1.png" width="110px;" height="150px">
+                                <div style=" display:flex; flex-direction:column; margin-left:20px; width:250px; margin-right:20px; height:  150px; background-color: white;">
+                                    <p style="letter-spacing:-1px; word-spacing:-2px ; font-size:17px; font-weight: 900; color:black; font-family:Verdana, Geneva, Tahoma, sans-serif">FC BARCELONA HOME KIT <br> 21/22</p>
+                                    <p style=" margin-top:-7px; color:gray; font-size: 13px; font-family: sans-serif; letter-spacing: -0.5;">Gear up Blaugarna Add your name or the name of your favorite player</p>
+                                    <p style="color:BLUE; font-size:12px; font-style: italic; font-weight: 900; font-family: sans-serif;">SHOP NOW</p>
+                                </div>
+
+                            </div>
+                           
+
+                        </div>
+                        <div class='storeIs'>
+                            <div style="z-index:1; display: flex; justify-content: center; align-items: center;">
+                                <img style="position: absolute; left:-50px; top:-10px;" src="Photo/store2.jpg" width="470px" height="260px">
+                            </div>
+                            <div class="BottomDiv">
+                                <img style="margin-left:-20px; margin-top:20px; " src="Photo/kit3.jpg" width="180px;" height="170px">
+                                <div style=" display:flex; flex-direction:column; margin-left:0px; width:250px; margin-right:20px; height:  150px; background-color: white;">
+                                    <p style="letter-spacing:-1px; word-spacing:-2px ; font-size:17px; font-weight: 900; color:black; font-family:Verdana, Geneva, Tahoma, sans-serif">FC BARCELONA AWAY KIT <br> 21/22</p>
+                                    <p style=" margin-top:-7px; color:gray; font-size: 13px; font-family: sans-serif; letter-spacing: -0.5;">A shirt to wear the value of the club whenever you go</p>
+                                    <p style="color:BLUE; font-size:12px; font-style: italic; font-weight: 900; font-family: sans-serif;">SHOP NOW</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class='storeIs'>
+                            <div style="z-index:1; display: flex; justify-content: center; align-items: center;">
+                                <img style="position: absolute; left:-50px; top:-10px;" src="Photo/store3.jpg" width="470px" height="260px">
+                            </div>
+                            <div class="BottomDiv">
+                                <img style="position: relative; left:-30px; top:10px;"" src="Photo/kit2.jpg" width="170px;" height="170px">
+                                <div style=" display:flex; flex-direction:column; margin-left:-30px; width:250px; margin-right:20px; height:  150px; background-color: white;">
+                                    <p style="letter-spacing:-1px; word-spacing:-2px ; font-size:17px; font-weight: 900; color:black; font-family:Verdana, Geneva, Tahoma, sans-serif">FC BARCELONA THIRD KIT <br> 21/22</p>
+                                    <p style=" margin-top:-7px; color:gray; font-size: 13px; font-family: sans-serif; letter-spacing: -0.5;">Get the exlusive Europa ligue kit</p>
+                                    <p style="color:BLUE; font-size:12px; font-style: italic; font-weight: 900; font-family: sans-serif;">SHOP NOW</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Store-->
+                <!-- Futurers-->
+                <div style="background-color: white; width:100%; height: 585px; margin-top:0px; padding-top:20px; display: flex; flex-direction: column; align-items: center;">
+                    <h2 style="color:rgb(15, 0, 151); font-size:35px; font-family: sans-serif;">Games & features</h2>
+                    <div style="width:97%; height: 400px; background-color: transparent; display:flex; flex-direction: row; justify-content: center;">
+                        <div style="margin-left:0%;" class="DivPhotIs">
+                            <div onmouseenter="ShowUpIs1()" onmouseleave="ShowUpIs12()"" class="DivPhotoIs2">
+                               <div style="display: flex; justify-content: center; align-items: center; width:25%; height: 400px; background-color: red;">
+                                    <img id="Photo1Is"src="Photo/Is1.jpg" width="505px" height="405px">
+                               </div>
+                               <div style="position:relative; left:-25%; width:25%; height: 400px; background-color: transparent;">
+                                    <div style="z-index: 2;  background-color:  rgb(4, 4, 138); width:23px; height: 200px; position: absolute; top:120px;">
+
+                                    </div>
+                                    <div style="z-index: 2;  background-color: rgb(177, 10, 10); width:23px; height: 140px; position: absolute; top:60px; right:0;">
+                                            
+                                    </div>
+                               </div>
+                            <div style="z-index: 2;  position:relative; left:-50%; display:flex;flex-direction: column; align-items: center; justify-content:flex-end; width:25%; height: 400px; background-color: transparent;">
+                                <p class="storeText">Camp nou to host UVCW clash with <br> Real </p>
+                                <p  class="aaShow" style=" margin-bottom:20px; letter-spacing:-0.5px; margin-top:-18px; color:white; font-family:sans-serif; font-size:13px; text-align: center;"> Quater final on match 30 will be the first ever competitves <br>womens fixture with fans in </p>
+                                <div style="margin-top:-20px; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+        
+                                    <div style="background-color: yellow; width:8px; height: 8px;">
+        
+                                    </div>
+                                    <p style=" margin-left:5px; font-family: sans-serif; font-weight: bold; color:yellow; font-size:11.5px;">FEATURE</p>
+                                    <i style="margin-bottom:0px; margin-left:10px; color:white; font-size:8px;" class="far fa-clock"></i>
+                                    <p style=" margin-bottom:15px; margin-left:5px; font-family: cursive; font-weight: bold; color:white; font-size:12px;">22 hrs ago</p>
+                                </div>
+                             </div>
+                             <div style="z-index: 1; position:relative;left:-75%; width:25%; height: 400px; background-color: transparent; display:flex; flex-direction:column; align-items:  center; justify-content: flex-end;">
+                                <div style=" width: 100%; height: 330px; background-image: linear-gradient(rgba(0,0,0,0),black);">
+
+                                </div>
+                             </div>
+                               
+
+                            </div>
+                       
+                        </div>
+                        <div class="DivPhotIs">
+                            <div onmouseenter="ShowUpIs2()" onmouseleave="ShowUpIs22()"" class="DivPhotoIs2">
+                                <div style="display: flex; justify-content: center; align-items: center; width:25%; height: 400px; background-color: red;">
+                                     <img id="Photo1Is2"src="Photo/Photo2.jpg" width="605px" height="405px">
+                                </div>
+                                <div style="position:relative; left:-25%; width:25%; height: 400px; background-color: transparent;">
+                                     <div style="z-index: 2;  background-color: rgb(4, 4, 138); width:23px; height: 200px; position: absolute; top:120px;">
+ 
+                                     </div>
+                                     <div style="z-index: 2;  background-color: rgb(177, 10, 10); width:23px; height: 140px; position: absolute; top:60px; right:0;">
+                                             
+                                     </div>
+                                </div>
+                             <div style="z-index: 2;  position:relative; left:-50%; display:flex;flex-direction: column; align-items: center; justify-content:flex-end; width:25%; height: 400px; background-color: transparent;">
+                                 <p class="storeText">Barca to play Atletic club in Copa<br> Del Ray</p>
+                                 <p  class="aaShow" style=" margin-bottom:20px;letter-spacing:-0.5px; margin-top:-18px; color:white; font-family:sans-serif; font-size:13px; text-align: center;"> Two familiar rivals in competitions in recent years will meet <br>again in Jenuary 18,19 n </p>
+                                 <div style="margin-top:-20px; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+         
+                                     <div style="background-color: yellow; width:8px; height: 8px;">
+         
+                                     </div>
+                                     <p style=" margin-left:5px; font-family: sans-serif; font-weight: bold; color:yellow; font-size:11.5px;">FEATURE</p>
+                                     <i style="margin-bottom:0px; margin-left:10px; color:white; font-size:8px;" class="far fa-clock"></i>
+                                     <p style=" margin-bottom:15px; margin-left:5px; font-family: cursive; font-weight: bold; color:white; font-size:12px;">07 JAN 22</p>
+                                 </div>
+                              </div>
+                              <div style="z-index: 1; position:relative;left:-75%; width:25%; height: 400px; background-color: transparent; display:flex; flex-direction:column; align-items:  center; justify-content: flex-end;">
+                                 <div style=" width: 100%; height: 330px; background-image: linear-gradient(rgba(0,0,0,0),black);">
+ 
+                                 </div>
+                              </div>
+                                
+ 
+                             </div>
+                        </div>
+                        <div style="margin-right:0%;" class="DivPhotIs">
+                            <div onmouseenter="ShowUpIs3()" onmouseleave="ShowUpIs33()"" class="DivPhotoIs2">
+                                <div style="display: flex; justify-content: center; align-items: center; width:25%; height: 400px; background-color: red;">
+                                     <img id="Photo1Is3"src="Photo/photo31.jpg" width="555px" height="405px">
+                                </div>
+                                <div style="position:relative; left:-25%; width:25%; height: 400px; background-color: transparent;">
+                                     <div style="z-index: 2;  background-color: rgb(4, 4, 138); width:23px; height: 200px; position: absolute; top:120px;">
+ 
+                                     </div>
+                                     <div style="z-index: 2;  background-color: rgb(177, 10, 10); width:23px; height: 140px; position: absolute; top:60px; right:0;">
+                                             
+                                     </div>
+                                </div>
+                             <div style="z-index: 2;  position:relative; left:-50%; display:flex;flex-direction: column; align-items: center; justify-content:flex-end; width:25%; height: 400px; background-color: transparent;">
+                                 <p class="storeText">Barca sings Ferran Torres</p>
+                                 <p  class="aaShow" style=" margin-bottom:20px;letter-spacing:-0.5px; margin-top:-18px; color:white; font-family:sans-serif; font-size:13px; text-align: center;">Club reach agreenment with Munchester City for the transfer of <br> a striker  on a five year deal until 2027 </p>
+                                 <div style="margin-top:-20px; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+         
+                                     <div style="background-color: yellow; width:8px; height: 8px;">
+         
+                                     </div>
+                                     <p style=" margin-left:5px; font-family: sans-serif; font-weight: bold; color:yellow; font-size:11.5px;">FEATURE</p>
+                                     <i style="margin-bottom:0px; margin-left:10px; color:white; font-size:8px;" class="far fa-clock"></i>
+                                     <p style=" margin-bottom:15px; margin-left:5px; font-family: cursive; font-weight: bold; color:white; font-size:12px;">28 DEC 22</p>
+                                 </div>
+                              </div>
+                              <div style="z-index: 1; position:relative;left:-75%; width:25%; height: 400px; background-color: transparent; display:flex; flex-direction:column; align-items:  center; justify-content: flex-end;">
+                                 <div style=" width: 100%; height: 330px; background-image: linear-gradient(rgba(0,0,0,0),black);">
+ 
+                                 </div>
+                              </div>
+                                
+ 
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Futurers-->
+                <div class="time">
+                    <h1 style="color:white; font-family: sans-serif; font-weight: 900; letter-spacing: -1px;">Barca TV+ next live strmes</h1>
+                    <div class="rest">
+                        <div style="background-color:#CD122D; width:5%; height: 180px;">
+
+                        </div>
+                        <div style="background-color:transparent; width:90%; height: 180px; display:flex; flex-direction: row; justify-content: center; align-items: center;">
+                                <div class="rest1">
+                                    <div style="width:100%;">
+                                        <p style="font-size:15px; letter-spacing:-1px;color:white; font-family:sans-serif; font-weight: 900;">Thueasday 11 January</p>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row; padding-bottom:20px; margin-top:-13px; width:100%; height: 100px; background-color:transparent;">
+                                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width:39%; height: 100px; background-color:transparent;">
+                                            <p style="margin-top:10px; font-size:52px; color:rgb(226, 183, 39); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">16:45</p>
+                                            <p style="margin-top:-50px; color:white; font-size:11px; word-spacing:1px;  letter-spacing:-0.5px; font-family: sans-serif; ">Barcelona, CET</p>
+                                        </div>
+                                        <div style=" padding-left:20px; display: flex; flex-direction: column; justify-content: center; align-items: center; width:62%; height: 100px; background-color:transparent;">
+                                            <p style="font-size:15px; color:white; font-family: sans-serif; font-weight: 700; ">BARCA LIVE: Barca v Real Madrid</p>
+                                            <p style="margin-top:-5px; font-size:12px; color:white; font-family: sans-serif;  ">All the latest news on match day ahead of the game plus post mathces news </p>
+                                        </div>
+
+                                    </div>
+
+
+                               
+                                </div>
+                                <div class="rest1">
+                                    <div style="width:100%;">
+                                        <p style="font-size:15px; letter-spacing:-1px;color:white; font-family:sans-serif; font-weight: 900;">Friday 12 January</p>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row; padding-bottom:20px; margin-top:-13px; width:100%; height: 100px; background-color:transparent;">
+                                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width:39%; height: 100px; background-color:transparent;">
+                                            <p style="margin-top:10px; font-size:52px; color:rgb(226, 183, 39); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">19:45</p>
+                                            <p style="margin-top:-50px; color:white; font-size:11px; word-spacing:1px;  letter-spacing:-0.5px; font-family: sans-serif; ">Barcelona, CET</p>
+                                        </div>
+                                        <div style=" padding-left:20px; display: flex; flex-direction: column; justify-content: center; align-items: center; width:62%; height: 100px; background-color:transparent;">
+                                            <p style="font-size:15px; color:white; font-family: sans-serif; font-weight: 700; ">BARCA LIVE: Barca v Atletico Madrid</p>
+                                            <p style="margin-top:-5px; font-size:12px; color:white; font-family: sans-serif;  ">Last match on Copa Cup this season has been most viewed by fans </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="rest1">
+                                    <div style="width:100%;">
+                                        <p style="font-size:15px; letter-spacing:-1px;color:white; font-family:sans-serif; font-weight: 900;">Thueasday 15 January</p>
+                                    </div>
+                                    <div style="display: flex; flex-direction: row; padding-bottom:20px; margin-top:-13px; width:100%; height: 100px; background-color:transparent;">
+                                        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width:39%; height: 100px; background-color:transparent;">
+                                            <p style="margin-top:10px; font-size:52px; color:rgb(226, 183, 39); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">12:45</p>
+                                            <p style="margin-top:-50px; color:white; font-size:11px; word-spacing:1px;  letter-spacing:-0.5px; font-family: sans-serif; ">Barcelona, CET</p>
+                                        </div>
+                                        <div style=" padding-left:20px; display: flex; flex-direction: column; justify-content: center; align-items: center; width:62%; height: 100px; background-color:transparent;">
+                                            <p style="font-size:15px; color:white; font-family: sans-serif; font-weight: 700; ">BARCA LIVE: Linares Depotive v Barca</p>
+                                            <p style="margin-top:-5px; font-size:12px; color:white; font-family: sans-serif;  ">Feran torres has sitaution to join this match. This match will be most viewed by fans </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        <div style="background-color:#154284; width:5%; height: 180px;">
+
+                        </div>
+                    </div>
+                    <div style="justify-content: flex-start; align-items: center; display:flex; flex-direction:column; width:100%; height: 130px; background-color: transparent;">
+                        <div style="margin-top:-1px; width:86.5%; height: 1px; background-color: rgb(58, 58, 58);">
+
+                        </div>
+                        <div id="storeColor3" onmouseenter="colorStore3()" onmouseleave="colorStore4()"  style="margin-top:20px; cursor:pointer; margin-right:20px; margin-bottom:15px; width:160px; height:40px; background-color: #154284; border-radius: 2px; display:flex;flex-direction: row; justify-content: center; align-items: center;"><p style="font-size:11.5px; color:white; font-family: sans-serif; ">OFFICIAL STORE CN</p></div>
+                    </div>
+                </div>
+
+                <!--  Players-->
+                <div class="DivPlayers">
+                    <div style="background-image: linear-gradient(rgb(0, 0, 0,0.5),rgba(0,0,0,0)); width:100%; height: 50px;">
+
+                    </div>
+                    <div style="width:100%; height: 100px; background-color:transparent; display:flex;flex-direction: row; justify-content: center; align-items: center;">
+                        <div style="background-color:transparent; width:33.3%; height: 100px;">
+
+                        </div>
+                        <div style="background-color:transparent; width:33.3%; height: 100px; text-align: center;  display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                            <h1 style="  font-family: sans-serif; font-size:33px; color:white;">Players</h1>
+                        </div>
+                        <div style="align-items: center; display:flex; flex-direction: row; justify-content: flex-end; padding-right:30px; background-color:transparent; width:33.3%; height: 100px;">
+                            <i id="leftMOve" onclick="CheckLeft()"  style="margin-right:10px;" class="clicked  arrow fas fa-arrow-circle-left"></i>
+                             <i id="rightMove" onclick="CheckRight()" class="arrow fas fa-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                    <div id="players" style="position:relative; left:3px; width:170%; height: 420px; background-color:transparent; display: flex; flex-direction: row;">
+                        <div onmouseenter="ChangeBusguet1()" onmouseleave="ChangeBusguet2()" class="HeisDiv">
+                            <div class="PhotoHeIs">
+                                <div style="z-index:1;  overflow:hidden; display: flex; flex-direction: row; justify-content: center; align-items: center;" class="PhotoHeIs2">
+                                    <img src="Photo/Bousquet.jpg" width="650px;" height="420px">      
+                                </div>
+                                <div style="z-index:3; top:-420px;background-color: transparent; " class="PhotoHeIs2">
+                                    <div style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0)); width:100%; height: 300px;">
+                                        
+                                    </div>
+
+                                </div>
+                                <div name="Busquet" style="z-index:2; top:-840px;  background-color: transparent; " class="PhotoHeIs2">
+                                    <h1 style="margin-bottom:50px; letter-spacing:-2px; font-style:italic; font-weight:900; font-size:65px;font-family: sans-serif; color:rgba(255,255,255,0.4);">BUSQUETS</h1>
+                                </div>
+                                <div  name="Busquet" style="z-index:4; top:-1260px;  background-color: transparent; flex-direction: column; justify-content: end; align-items: center;" class="PhotoHeIs2">
+                                    <div style="display: flex; flex-direction: row; justify-content: end; align-items:center;">
+                                        <h2 style=" display:inline; margin-bottom:60px; letter-spacing:-2px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">5</h2>
+                                        <p style="margin-left:8px;  display:inline; margin-bottom:63px; letter-spacing:0px;  font-size:22px;font-family:Arial, Helvetica, sans-serif;  color:rgba(255,255,255,1);">Sergio</p>
+                                        <h2 style="margin-left:8px; display:inline; margin-bottom:60px; letter-spacing:0px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">Busquet</h2>
+            
+                                    </div>
+                                    <p style="margin-bottom: 30px; font-weight: 900;font-size:13px; font-family:sans-serif; margin-top:-60px; color:white;">Midfielder</p>
+                                   
+                                </div>
+                                <div name="Busquet" style="top:-1572px;  z-index:5; align-items: flex-end; background-color: transparent;"" class="PhotoHeIs2">
+                                    <div style="display:flex; flex-direction:row; align-items: center; justify-content: center; padding-top:0px; background-color: transparent; width:90%; height: 100px; border-top:1px solid gray;">
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family:sans-serif; font-size:10px; color:white; font-weight: 900; letter-spacing: -1px; word-spacing:1px;"><b>BARCA APEARANCE</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>657</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);"><b>27</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family: sans-serif; font-size:10px; color:white;"><b>BARCA GOALS</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>16</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>1</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style=" margin-bottom:0px;font-family: sans-serif; font-size:10px; color:white;"><b>BARCA ASIST</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>35</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>0</b></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div onmouseenter="ChangeStegenTextUp()" onmouseleave="ChangeStegenTextDown()" class="HeisDiv">
+                            <div class="PhotoHeIs">
+                                <div style="z-index:1;  overflow:hidden; display: flex; flex-direction: row; justify-content: center; align-items: center;" class="PhotoHeIs2">
+                                    <img src="Photo/Stegen.jfif" width="650px;" height="420px">      
+                                </div>
+                                <div style="z-index:3; top:-420px;background-color: transparent; " class="PhotoHeIs2">
+                                    <div style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0)); width:100%; height: 300px;">
+
+                                    </div>
+
+                                </div>
+                                <div name="Stegen" style="z-index:2; top:-840px;  background-color: transparent; " class="PhotoHeIs2">
+                                    <h1 style="margin-bottom:50px; letter-spacing:-2px; font-style:italic; font-weight:900; font-size:65px;font-family: sans-serif; color:rgba(255,255,255,0.4);">STEGEN</h1>
+                                </div>
+                                <div  name="Stegen" style="z-index:4; top:-1260px;  background-color: transparent; flex-direction: column; justify-content: end; align-items: center;" class="PhotoHeIs2">
+                                    <div style="display: flex; flex-direction: row; justify-content: end; align-items:center;">
+                                        <h2 style=" display:inline; margin-bottom:60px; letter-spacing:-2px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">1</h2>
+                                        <p style="margin-left:8px;  display:inline; margin-bottom:63px; letter-spacing:0px;  font-size:22px;font-family:Arial, Helvetica, sans-serif;  color:rgba(255,255,255,1);">Marc-Andre</p>
+                                        <h2 style="margin-left:8px; display:inline; margin-bottom:60px; letter-spacing:0px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">ter Stege</h2>
+            
+                                    </div>
+                                    <p style="margin-bottom: 30px; font-weight: 900;font-size:13px; font-family:sans-serif; margin-top:-60px; color:white;">Goalkeeper</p>
+                                   
+                                </div>
+                                <div name="Stegen" style="top:-1572px;  z-index:5; align-items: flex-end; background-color: transparent;"" class="PhotoHeIs2">
+                                    <div style="display:flex; flex-direction:row; align-items: center; justify-content: center; padding-top:0px; background-color: transparent; width:90%; height: 100px; border-top:1px solid gray;">
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family:sans-serif; font-size:10px; color:white; font-weight: 900; letter-spacing: -1px; word-spacing:1px;"><b>BARCA APEARANCE</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>303</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);"><b>25</b></p>
+                                        </div>
+                                        <div style="width:33%;" class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family: sans-serif; font-size:10px; color:white;"><b>BARCA CLEEN SHEETS</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>113</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>4</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style=" margin-bottom:0px;font-family: sans-serif; font-size:10px; color:white;"><b>BARCA SAVES</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>717</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>36</b></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div onmouseenter="ChangePiqueTextUp()" onmouseleave="ChangePiqueTextDown()" class="HeisDiv">
+                            <div class="PhotoHeIs">
+                                <div style="z-index:1;  overflow:hidden; display: flex; flex-direction: row; justify-content: center; align-items: center;" class="PhotoHeIs2">
+                                    <img src="Photo/Pigue.jfif" width="650px;" height="420px">      
+                                </div>
+                                <div style="z-index:3; top:-420px;background-color: transparent; " class="PhotoHeIs2">
+                                    <div style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0)); width:100%; height: 300px;">
+
+                                    </div>
+
+                                </div>
+                                <div name="Pique" style="z-index:2; top:-840px;  background-color: transparent; " class="PhotoHeIs2">
+                                    <h1 style="margin-bottom:50px; letter-spacing:-2px; font-style:italic; font-weight:900; font-size:65px;font-family: sans-serif; color:rgba(255,255,255,0.4);">PIQUE</h1>
+                                </div>
+                                <div  name="Pique" style="z-index:4; top:-1260px;  background-color: transparent; flex-direction: column; justify-content: end; align-items: center;" class="PhotoHeIs2">
+                                    <div style="display: flex; flex-direction: row; justify-content: end; align-items:center;">
+                                        <h2 style=" display:inline; margin-bottom:60px; letter-spacing:-2px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">3</h2>
+                                        <p style="margin-left:8px;  display:inline; margin-bottom:63px; letter-spacing:0px;  font-size:22px;font-family:Arial, Helvetica, sans-serif;  color:rgba(255,255,255,1);">Gerard</p>
+                                        <h2 style="margin-left:8px; display:inline; margin-bottom:60px; letter-spacing:0px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">Piqgue</h2>
+            
+                                    </div>
+                                    <p style="margin-bottom: 30px; font-weight: 900;font-size:13px; font-family:sans-serif; margin-top:-60px; color:white;">Defender</p>
+                                   
+                                </div>
+                                <div name="Pique" style="top:-1572px;  z-index:5; align-items: flex-end; background-color: transparent;"" class="PhotoHeIs2">
+                                    <div style="display:flex; flex-direction:row; align-items: center; justify-content: center; padding-top:0px; background-color: transparent; width:90%; height: 100px; border-top:1px solid gray;">
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family:sans-serif; font-size:10px; color:white; font-weight: 900; letter-spacing: -1px; word-spacing:1px;"><b>BARCA APEARANCE</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>590</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);"><b>24</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family: sans-serif; font-size:10px; color:white;"><b>BARCA GOALS</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>51</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>2</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style=" margin-bottom:0px;font-family: sans-serif; font-size:10px; color:white;"><b>BARCA ASIST</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>7</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>0</b></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div onmouseenter="CahngePedriTextUp()" onmouseleave="ChangePedriTextDown()" class="HeisDiv">
+                            <div class="PhotoHeIs">
+                                <div style="z-index:1;  overflow:hidden; display: flex; flex-direction: row; justify-content: center; align-items: center;" class="PhotoHeIs2">
+                                    <img src="Photo/Pedri.jfif" width="650px;" height="420px">      
+                                </div>
+                                <div style="z-index:3; top:-420px;background-color: transparent; " class="PhotoHeIs2">
+                                    <div style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0)); width:100%; height: 300px;">
+
+                                    </div>
+
+                                </div>
+                                <div name="Pedri" style="z-index:2; top:-840px;  background-color: transparent; " class="PhotoHeIs2">
+                                    <h1 style="margin-bottom:50px; letter-spacing:-2px; font-style:italic; font-weight:900; font-size:65px;font-family: sans-serif; color:rgba(255,255,255,0.4);">PIDRI</h1>
+                                </div>
+                                <div  name="Pedri" style="z-index:4; top:-1260px;  background-color: transparent; flex-direction: column; justify-content: end; align-items: center;" class="PhotoHeIs2">
+                                    <div style="display: flex; flex-direction: row; justify-content: end; align-items:center;">
+                                        <h2 style=" display:inline; margin-bottom:60px; letter-spacing:-2px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">16</h2>
+
+                                        <h2 style="margin-left:8px; display:inline; margin-bottom:60px; letter-spacing:0px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">Pedri</h2>
+            
+                                    </div>
+                                    <p style="margin-bottom: 30px; font-weight: 900;font-size:13px; font-family:sans-serif; margin-top:-60px; color:white;">Midfielder</p>
+                                   
+                                </div>
+                                <div name="Pedri" style="top:-1572px;  z-index:5; align-items: flex-end; background-color: transparent;"" class="PhotoHeIs2">
+                                    <div style="display:flex; flex-direction:row; align-items: center; justify-content: center; padding-top:0px; background-color: transparent; width:90%; height: 100px; border-top:1px solid gray;">
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family:sans-serif; font-size:10px; color:white; font-weight: 900; letter-spacing: -1px; word-spacing:1px;"><b>BARCA APEARANCE</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>57</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);"><b>5</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family: sans-serif; font-size:10px; color:white;"><b>BARCA GOALS</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>4</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>0</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style=" margin-bottom:0px;font-family: sans-serif; font-size:10px; color:white;"><b>BARCA ASIST</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>6</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>0</b></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div onmouseenter="CahngedejongTextUp()" onmouseleave="ChangedejongTextDown()" class="HeisDiv">
+                            <div class="PhotoHeIs">
+                                <div style="z-index:1;  overflow:hidden; display: flex; flex-direction: row; justify-content: center; align-items: center;" class="PhotoHeIs2">
+                                    <img style="position:relative; left:-70px" src="Photo/dejong.jfif" width="850px;" height="420px">      
+                                </div>
+                                <div style="z-index:3; top:-420px;background-color: transparent; " class="PhotoHeIs2">
+                                    <div style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0)); width:100%; height: 300px;">
+
+                                    </div>
+
+                                </div>
+                                <div name="dejong" style="z-index:2; top:-840px;  background-color: transparent; " class="PhotoHeIs2">
+                                    <h1 style="margin-bottom:50px; margin-right:30px; letter-spacing:-2px; font-style:italic; font-weight:900; font-size:65px;font-family: sans-serif; color:rgba(255,255,255,0.4);">JONG</h1>
+                                </div>
+                                <div  name="dejong" style="z-index:4; top:-1260px;  background-color: transparent; flex-direction: column; justify-content: end; align-items: center;" class="PhotoHeIs2">
+                                    <div style="display: flex; flex-direction: row; justify-content: end; align-items:center;">
+                                        <h2 style=" display:inline; margin-bottom:60px; letter-spacing:-2px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">21</h2>
+                                        <p style="margin-left:8px;  display:inline; margin-bottom:63px; letter-spacing:0px;  font-size:22px;font-family:Arial, Helvetica, sans-serif;  color:rgba(255,255,255,1);">Frenkie</p>
+                                        <h2 style="margin-left:8px; display:inline; margin-bottom:60px; letter-spacing:0px;  font-weight:900; font-size:21px;font-family: sans-serif; color:rgba(255,255,255,1);">de Jong</h2>
+            
+            
+                                    </div>
+                                    <p style="margin-bottom: 30px; font-weight: 900;font-size:13px; font-family:sans-serif; margin-top:-60px; color:white;">Midfielder</p>
+                                   
+                                </div>
+                                <div name="dejong" style="top:-1572px;  z-index:5; align-items: flex-end; background-color: transparent;"" class="PhotoHeIs2">
+                                    <div style="display:flex; flex-direction:row; align-items: center; justify-content: center; padding-top:0px; background-color: transparent; width:90%; height: 100px; border-top:1px solid gray;">
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family:sans-serif; font-size:10px; color:white; font-weight: 900; letter-spacing: -1px; word-spacing:1px;"><b>BARCA APEARANCE</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>117</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);"><b>24</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style="margin-bottom:0px; font-family: sans-serif; font-size:10px; color:white;"><b>BARCA GOALS</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>10</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>1</b></p>
+                                        </div>
+                                        <div class="resultPlayer">
+                                            <p style=" margin-bottom:0px;font-family: sans-serif; font-size:10px; color:white;"><b>BARCA ASIST</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px; font-family: sans-serif; font-size:30px; color:white;"><b>12</b></p>
+                                            <p style="margin-top:-2px; margin-bottom:0px;  font-family: sans-serif; font-size:10px; color:gray;"><b>2021/2022 Season</b></p>
+                                            <p style="margin-top:0px; margin-bottom:0px;  font-family: sans-serif; font-size:20px; color:rgb(245, 186, 26);;"><b>2</b></p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="buttonsPlayers">
+                        <div  id="sideLeft" onclick="MovPlayers(0)" style="margin-right:4.5px; " class="click active">
+
+                        </div>
+                        <div id="sideRight"  onclick="MovPlayers(1)" class="click">
+
+                        </div>
+
+                    </div>
+               
+                </div>
+                     <!--  Players-->
+
+           
+             </div> 
+             
+                <!--Space -->
+           
+
+                <!--Foter -->
+            <div class="footer">
+                <div style=" color:white;text-align: center; font-family: sans-serif; font-weight: 900; letter-spacing: -1px;"><p>Follow FC Barcelona on social media</p></div>
+                <div class="media">
+                    <div style="background-color:#7360F2;" class="MediaLog">
+                        <i class="mediaSi fab fa-whatsapp iconsColors"></i>
+                        <div style='   margin-top:10px; display:flex; flex-direction:column ;margin-left:10px;'>
+                            <p class="textsize" >FC Barcelona</p>
+                            <p class="textsizeName" style="margin-top:-8px;" class="textsize" >@ fcbarcelona</p>
+                        </div>
+                    </div>
+                    <div style="background-color:#3B5998;" class="MediaLog">
+                        <i class="mediaSi fab fa-facebook-square iconsColors"></i>
+                        <div style='   margin-top:10px; display:flex; flex-direction:column ;margin-left:10px;'>
+                            <p class="textsize" >FC Barcelona</p>
+                            <p class="textsizeName" style="margin-top:-8px;" class="textsize" >@fcbarcelona</p>
+                        </div>
+                    </div>
+                    <div style="background-color:#55ACEE;"  class="MediaLog">
+                        <i  class="mediaSi fab fa-twitter iconsColors"></i>
+                        <div style='   margin-top:10px; display:flex; flex-direction:column ;margin-left:10px;'>
+                            <p class="textsize" >FC Barcelona</p>
+                            <p class="textsizeName" style="margin-top:-8px;" class="textsize" >@fcbarcelona</p>
+                        </div>
+                    </div>
+                    <div style="background-color:#BB0000;" class="MediaLog">
+                        <i  class="mediaSi fab fa-youtube iconsColors"></i>
+                        <div style='   margin-top:10px; display:flex; flex-direction:column ;margin-left:10px;'>
+                            <p class="textsize" >FC Barcelona</p>
+                            <p class="textsizeName"  style="margin-top:-8px;" class="textsize" >Youtube</p>
+                        </div>
+                    </div>
+                    <div style="background-color:#5D55C8;" class="MediaLog">
+                        <i  class="mediaSi fab fa-instagram iconsColors"></i>
+                        <div style='   margin-top:10px; display:flex; flex-direction:column ;margin-left:10px;'>
+                            <p class="textsize" >FC Barcelona</p>
+                            <p class="textsizeName" style="margin-top:-8px;" class="textsize" >@fcbarcelona</p>
+                        </div>
+                    </div>
+                    <div  style="background-color:#EFEFEF;"  class="MediaLog">
+                        <i style="color:black;"class="mediaSi fab fa-twitch"></i>
+                        <div style='   margin-top:10px; display:flex; flex-direction:column ;margin-left:10px;'>
+                            <p style="color:black;"class="textsize" >FC Barcelona</p>
+                            <p class="textsizeName" style="margin-top:-8px; color:black;" class="textsize" >OneFootball</p>
+                        </div>
+                    </div>
+                    <div style="background-color:#000000;"  class="MediaLog">
+                        <i class="mediaSi fab fa-tiktok"></i>
+                        <div style='   margin-top:10px; display:flex; flex-direction:column ;margin-left:10px;'>
+                            <p class="textsize" >FC Barcelona</p>
+                            <p class="textsizeName" style="margin-top:-8px" class="textsize" >Tik tok</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="textSpace">
+                    <div class="textSpaceShort">
+                        <h3 style="margin-bottom:30px; color:white; letter-spacing: -1px; font-family: sans-serif; font-size: 18px;">Goalkeepers</h3>
+                        <a href="#aa" class="textSpaceShortp">Marc-Andre ter Stegen</a>
+                        <a  href="#aa"class="textSpaceShortp">Neto</a>
+                        <a  href="#aa"class="textSpaceShortp">Inaki papa</a>
+                    </div>
+                    <div class="textSpaceShort">
+                        <h3 style="margin-bottom:30px; color:white; letter-spacing: -1px; font-family: sans-serif; font-size: 18px;">Defenders</h3>
+                        <a  href="#aa"class="textSpaceShortp">Sergino Dest</a>
+                        <a  href="#aa"class="textSpaceShortp">Gerard Pique</a>
+                        <a  href="#aa"class="textSpaceShortp">Ronald Araujo</a>
+                        <a href="#aa" class="textSpaceShortp">Dani Alves</a>
+                        <a  href="#aa"class="textSpaceShortp">Clenment Lengne</a>
+                        <a  href="#aa"class="textSpaceShortp">Jordi Alba</a>
+                        <a href="#aa" class="textSpaceShortp">Oscar Minguaza</a>
+                        <a href="#aa" class="textSpaceShortp">Eric Garcia</a>
+                        <a  href="#aa"class="textSpaceShortp">Samuel Emtit</a>
+                    </div>
+                    <div  style="margin-left:0px; position:relative; left:-20px;"class="textSpaceShort">
+                        <h3 style="margin-bottom:30px; color:white; letter-spacing: -1px; font-family: sans-serif; font-size: 18px;">Midfielders</h3>
+                        <a href="#aa"class="textSpaceShortp">Sergio Busquets</a>
+                        <a href="#aa"class="textSpaceShortp">Sergi Roberto</a>
+                        <a href="#aa" class="textSpaceShortp">Riqui Puig</a>
+                        <a href="#aa"class="textSpaceShortp">Pedri</a>
+                        <a href="#aa"class="textSpaceShortp">Naco Gonzalez</a>
+                        <a href="#aa"class="textSpaceShortp">Frenkie de Jong</a>
+                 
+                    </div>
+                    <div  style="margin-left:0px; position:relative; left:-30px;"class="textSpaceShort">
+                        <h3 style="margin-bottom:30px; color:white; letter-spacing: -1px; font-family: sans-serif; font-size: 18px;">Forwards</h3>
+                        <a href="#aa"class="textSpaceShortp">Margin Braithwaite</a>
+                        <a href="#aa"class="textSpaceShortp">Ousmane Dembele</a>
+                        <a href="#aa"class="textSpaceShortp">Memphis</a>
+                        <a href="#aa"class="textSpaceShortp">Ferran Torres</a>
+                        <a href="#aa"class="textSpaceShortp">Luuk de Jong</a>
+                        <a href="#aa"class="textSpaceShortp">Arsu Fati</a>
+                 
+                    </div>
+                    <div  style="margin-left:0px; position:relative; left:-30px;"class="textSpaceShort">
+                        <h3 style="margin-bottom:30px; color:white; letter-spacing: -1px; font-family: sans-serif; font-size: 18px;">Barca Products</h3>
+                        <a href="#aa"class="textSpaceShortp">Culers Membershi</a>
+                        <a href="#aa"class="textSpaceShortp">Barca TV+</a>
+                        <a href="#aa"class="textSpaceShortp">Tickets & Live Tours</a>
+                        <a href="#aa"class="textSpaceShortp">Barca App</a>
+                        <a href="#aa"class="textSpaceShortp">Online store</a>
+                        <a href="#aa"class="textSpaceShortp">Support FAQs</a>
+                        <a href="#aa"class="textSpaceShortp">Black Friday</a>
+                    </div>
+                    <div  style="margin-left:0px; position:relative; left:-30px;"class="textSpaceShort">
+                        <h3 style="margin-bottom:30px; color:white; letter-spacing: -1px; font-family: sans-serif; font-size: 18px;">Club</h3>
+                        <a href="#aa"class="textSpaceShortp">Camp Nou</a>
+                        <a href="#aa"class="textSpaceShortp">The Crest+</a>
+                        <a href="#aa"class="textSpaceShortp">Anthem</a>
+                   
+                    </div>
+                    <div  style="margin-left:0px; position:relative; left:-80px;"class="textSpaceShort">
+                        <h3 style="margin-bottom:30px; color:white; letter-spacing: -1px; font-family: sans-serif; font-size: 18px;">History</h3>
+                        <a href="#aa"class="textSpaceShortp">2008-16. The best years in our</a>
+                        <a href="#aa"class="textSpaceShortp">history</a>
+                        <a href="#aa"class="textSpaceShortp">The era of the Dream Team</a>
+                        <a href="#aa"class="textSpaceShortp">1950-1961 The Kubala era</a>
+                        <a href="#aa"class="textSpaceShortp">1899-1909. Foundation and</a>
+                        <a href="#aa"class="textSpaceShortp">survival</a>
+                        <a href="#aa"class="textSpaceShortp">Barca in the Campion League</a>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: row; align-items: center;">
+                    <img style="float:left; margin-left:8px;" src="Photo/Barcelona-Logo.png" width="60px" height="40px">
+                    <h2 style="letter-spacing:-1px;position:relative; left:-10px; font-family:sans-serif; color:white">FC BARCELONA</h2>
+                </div>
+                <div style="display: flex; flex-direction: row;align-items: center; ">
+                    <div style="padding-left:18px;vertical-align: center; width:45%; background-color: transparent; height: 50px; display:flex; flex-direction:row; align-items: center;">
+                        <p style="font-size:14px; font-family: sans-serif; display:inline; color:white">@ Copyright Mare </p> <p style="margin-top:14px;color:rgb(197, 192, 192);font-size:13px; font-family: sans-serif; margin-left:3.5px;display:inline;color:rgb(177, 172, 172)">Non official web site of FC Barcelona</p>
+                    </div>
+                    <div>
+                        <p style="display:inline; color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">Legal Terms</p>
+                        <p style="margin-left:4px; margin-right:4px; display:inline; color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">|</p>
+                        <p style="display:inline; color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">Privaci Policy</p>
+                        <p style="margin-left:4px; margin-right:4px; display:inline;  color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">|</p>
+                        <p style="display:inline; color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">Cookies</p>
+                        <p style="margin-left:4px; margin-right:4px; display:inline; color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">|</p>
+                        <p style="display:inline;  color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">Accessibility</p>
+                        <p style="margin-left:4px; margin-right:4px; display:inline; color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">|</p>
+                        <p style="display:inline; color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">Contact Us</p>
+                        <p style="margin-left:4px; margin-right:4px; display:inline;  color:rgb(180, 179, 179); font-size:10.5px; font-family: sans-serif; ">|</p>
+                        <p style="display:inline; color:rgb(180, 179, 179);font-size:10.5px; font-family: sans-serif; ">Support/FAQs</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div style="z-index:-1; position:relative; top:-20px; width:100%; height: 18px; background-image: linear-gradient(to right,rgb(180, 16, 16),rgb(46, 46, 202));"></div>
+           
+                         <!--Foter -->
+        </div>
+         <!-- Page -->
+      
+    </body>
+    <script src="BarcelonaSite.js">
+
+    </script>
+    <script src="Menu.js"></script>
+    <script src="Slider.js"></script>
+    <script src="Space.css"></script>
+    <script src="SlideDiv.js"></script>
+    <script src="Store.js"></script>
+    <script src="Players.js"></script>
+    <script src="Foter.js"></script>
+</html>

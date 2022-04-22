@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+  <head>
+    <link href="assets/fontawesome/css/all.css" rel="stylesheet">
+  </head>
+  <style>
+
+  </style>
+
+
+  <body>
+ 
+    
+   <!--<i class="fa-solid fa-cutlery"></i> --> 
+    <p id = 'demo'></p>
+    <button onclick = "Ope()">Click</button>
+  </body>
+
+  <script>
+    let BrowserInfoformati = navigator.appVersion;
+    let UserPathFile;
+    let WindowsApp = false;
+    let AndroidApp = false;
+    let UserBrowsare = "";
+    let HeIs= "";
+
+    let screenWidth;
+    let screenHeight;
+    screenHeight = window.screen.height;
+    screenWidth = window.screen.width;
+    window.alert(Date());
+
+    function Ope() {
+      window.location = "file://C:/Windows/System32/cmd.exe";
+    }
+    // User Windows
+    var helper = BrowserInfoformati.match(/\(Windows NT 10.0/);
+    if (helper != null) {
+      WindowsApp = true;
+    }
+    // User Android 
+    helper = BrowserInfoformati.match(/Android/);
+    if (helper != null) {
+      AndroidApp = true;
+    }
+        // User Browsare
+    helper = BrowserInfoformati.match(/Chrome/);
+    if (helper != null) {
+      UserBrowsare = helper;
+    }
+
+    document.getElementById("demo").innerHTML = navigator.appVersion;
+    if (WindowsApp == false ) {
+      HeIs += "<br>"+"User is using Android App "+ UserBrowsare;
+    }
+    else {
+      HeIs += "<br>"+"User is using Windows App "+ UserBrowsare;
+    }
+    if(screenWidth == 1920) {
+      HeIs += "<br> FULL HD monitor";
+    }else if (screenWidth == 2048){
+      HeIs += "<br> 2K monitor";
+    }else if (screenWidth == 3860){
+      HeIs += "<br> 4K monitor";
+    }else {
+      HeIs += "<br>" +"Small screen "+screenWidth +" "+screenHeight;
+    }
+    document.getElementById("demo").innerHTML = HeIs;
+   //   helper = window.open("https://www.youtube.com","","width=1000,height=500");
+
+  </script>
+</html>
+ 
