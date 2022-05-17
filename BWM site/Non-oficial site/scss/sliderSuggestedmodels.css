@@ -1,0 +1,78 @@
+.buttons-container {
+  background-color: transparent;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -30px;
+}
+
+.buttons-holder {
+  width: 45px;
+  height: 50px;
+  background-color: transparent;
+  position: absolute;
+  display: none;
+}
+
+.slider-buttons {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: gray;
+}
+
+.mobile-dot {
+  display: none;
+}
+
+.active-dot {
+  background-color: blue !important;
+  width: 11px !important;
+  height: 11px !important;
+  border-radius: 6px !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .buttons-holder {
+    display: block;
+  }
+  .mobile-dot {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 519px) and (min-width: 100px) {
+  .mobile-dot {
+    display: block;
+  }
+  .buttons-holder {
+    width: 55px;
+  }
+}
+/*# sourceMappingURL=sliderSuggestedmodels.css.map */

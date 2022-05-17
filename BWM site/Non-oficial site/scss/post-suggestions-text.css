@@ -1,0 +1,65 @@
+.post-suggestions-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post-suggestions-text p {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.post-suggestions-text h3 {
+  margin-top: 25px;
+}
+
+.Sign-up-button {
+  width: 220px;
+  height: 60px;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: 700;
+  font-size: 19px;
+  color: #272727;
+  margin-top: 10px;
+}
+
+.Sign-up-button:hover {
+  width: 220px;
+  height: 60px;
+  font-size: 19px;
+  background-color: white;
+  border: 2px solid black !important;
+}
+
+@media only screen and (max-width: 1220px) and (min-width: 751px) {
+  .post-suggestions-text h3 {
+    font-size: 18px;
+  }
+  .post-suggestions-text p {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .post-suggestions-text {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .post-suggestions-text p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .post-suggestions-text h3 {
+    font-size: 18px;
+  }
+  .Sign-up-button {
+    width: 200px;
+    height: 55px;
+  }
+}
+/*# sourceMappingURL=post-suggestions-text.css.map */

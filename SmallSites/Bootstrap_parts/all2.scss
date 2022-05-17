@@ -1,0 +1,14 @@
+.text {
+    font-size:20px;
+    padding:20px;
+    background-color: blue;
+}
+
+.text-header {
+    @extend .text;
+    color:black;
+}
+.text-aa2{
+    @extend .text;
+    color:green;
+}

@@ -1,0 +1,108 @@
+3-7.01.2022
+pon - 6h
+uto 6h
+sre 6h
+cet 6h
+pet 6h
+
+10-14.01.2022
+pon 6h
+uto 6h
+sre 6h
+cet 6h
+pet 6h
+
+17-21.01.2022
+pon 6h
+uto 6h
+sre 6h
+cet 4h
+pet 6h
+
+24-28.01.2022
+pon 6h
+uto 6h
+sre 6h
+cet 6h
+pet 6h
+
+
+31.1.-4.2.2022
+pon 6h
+uto 6h
+sre 6h
+cet 6h
+pet 6h   +2h	Petak 13h Razgovor sa profesorom Webex
+
+7-11.2.2022
+pon 6h
+uto 6h
+sre 5h
+cet 6h
+pet 6h
+14-18.2.2022
+pon 6h
+uto 6h
+sre 6h
+cet 6h
+pet 6h
+21-25.2.2022.
+pon 6h
+uto 6h
+sre 5h
+cet 6h
+pet 5h
+28.2.-4.3.2022.
+pon 5h
+uto 6h
+sre 6h
+cet 6h
+pet 5h
+
+7-11.3.2022.
+pon 6h 1h
+uto 6h 
+sre 6h
+cet 5h
+pet 6h
+14-18.3.2022.
+pon 5h
+uto 5h
+sre 6h
+cet 6h
+pet
+
+21-25.3.2022.
+pon 6h
+uto 6h
+sre 6h
+cet 6h
+pet 6h
+28.3-1.4.2022.
+pon 6h
+uto 5h
+sre 6h
+cet 6h
+pet 5h
+
+4.4-8.4.2022.
+pon 5h
+uto 6h 2h
+sre 5h
+cet 6h 1h
+pet 
+
+11.4-15.4.2022.
+pon 6h 	8AM - 2PM	(1h razgovor, grid 2h, 3h angular) 
+uto 6h  9AM - 2PM +1h      (3h css, 2h angular, 1h razgovor) 
+sre 5h 	9AM - 2PM	(1h razgovor, 1h css, 3h SASS)
+cet 5.30h 9AM - 14.30AM	(razgovor, 4h sass)
+pet 6h  9AM - 2PM +1h 	(razgovor,3.30h sass, angular)
+template:
+
+18.4-22.04.2022
+pon - 0h
+utr - 5h 9AM - 2PM      (net, bootstrap 3h )
+sre - 5.30h 9AM - 10AM, 2:30PM - 7PM ( razgovor, bootstrap 4h, css 1h) 
+cet - 5h 9AM-12:30AM, 4:30PM - 6PM ( razgovor, bootstrap, sajt)
+pet - 5h 9AM - 12:30PM, 2:30PM - 4PM (razgovor , bootstrap 2h)

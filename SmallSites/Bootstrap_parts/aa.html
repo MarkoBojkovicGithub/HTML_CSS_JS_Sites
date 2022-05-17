@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/fontawesome/css/all.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href = "all2.css" type = "text/css" rel = "stylesheet">
+<style>
+  :root {
+    --show:0;
+  }
+  .card {
+    cursor: pointer;
+  }
+  .card-holder {
+    display: none;
+  }
+  .card-active {
+    display: block;
+  }
+
+  .photo-holder {
+    position: relative;
+  }
+  .progres-holder {
+    display: none;
+    margin-bottom: 20px;
+    margin-top:0px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    top:0;
+    left:0;
+    padding-bottom: 30px;
+    padding-left:5%;
+    padding-right: 5%;
+    padding-top:5%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.8;
+  }
+  .progres-holder p {
+    margin-bottom: 2px;
+  }
+  
+  .card-eleme{
+    width: 100%;
+    height: 100%;
+    position:relative
+  }
+  .card-body {
+    position: relative;
+    z-index: 1;
+  }
+
+  .photo {
+    width: 100%;
+  }
+  .pagination-holder {
+    display: flex;
+    justify-content: center;
+    padding-top:50px;
+    overflow: hidden;
+  }
+
+  .page {
+    margin-left: 3px;
+    margin-right: 3px;
+    z-index: 1;
+  }
+
+  .btn-group .btn-secondary {
+    border-radius: 0;
+  }
+
+  .btn-secondary {
+    padding:10px 20px;
+  }
+  .menu {
+    background-color: transparent;
+    width: auto;
+  }
+  .dropdown-menu {
+    padding:0;
+  }
+  .dropdown-menu .dropdown-item {
+    padding:10px 20px;
+  }
+
+  .alert-holder {
+    position: fixed;
+    bottom:0;
+    right: 0;
+    z-index: 3;
+    width: 22%;
+    padding-top:10px;
+  }
+
+  .backfilter {
+    backdrop-filter:blur(6px);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .alert-container {
+    opacity: 0;
+  }
+
+  .info {
+    margin-left: 5px;
+  }
+  .yes {
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spinner-border {
+    margin-left:2px;
+  }
+
+  .answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .backfilter-holder {
+    display: none;
+  }
+  ol.missions li a {
+    color:gray;
+    text-decoration: none;
+  }
+  ol.missions li a:hover {
+    color:black;
+  }
+  ol.missions li {
+    margin:5px 5px;
+  }
+  .updates-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .updates li a {
+    color:black;
+    text-decoration: none;
+  }
+  .update-body {
+    background-color: rgba(238, 238, 238, 0.1);
+  }
+  .carousel-text {
+    position: absolute;
+    float:left;
+  }
+  .carousel-caption {
+    left:0;
+    right:0;
+    top:0%;
+    text-align: left;
+    width:100%;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0) 30%);
+    padding-left:5%;
+    padding-top:3%;
+  }
+  .carousel-item {
+    position: relative;
+  }
+  .caption-botton {
+    width: 177px;
+    z-index: 3;
+  }
+  .stars {
+    display: flex;
+    flex-direction: row;
+    margin-bottom:10px;
+    width: 90px;
+    cursor: pointer;
+  }
+
+  .caption-text-is {
+    margin-bottom: 15px;
+  }
+  .carousel-control-prev-icon {
+    width:60px;
+    height: 100px;
+    z-index: 2;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    z-index: 2 !important;
+    height: 200px;
+    position: absolute;
+    top:35%;
+  }
+  .carousel-control-next-icon {
+    width:60px;
+    height: 100px;
+  }
+  .buy-botton{
+    position: absolute;
+    left:10px;
+    width:140px;
+  }
+  .navbar {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-link {
+    color:white;
+    cursor: pointer;
+  }
+
+
+  @media  screen and (max-width:500px) {
+
+  }
+
+</style>
+</head>
+<!-- Popup menu -->
+
+<body onresize="menu()" data-bs-spy = "scroll" data-bs-target = ".navbar" data-bs-offset = "100">
+  <div class = "backfilter-holder" id = "error" >
+    <div class = "backfilter">
+      <div class = "yes bg-dark">
+        <h3 class = "text-light">Do you want to continue?</h3>
+        <div class = "answer">
+          <button onclick = "continueShow()" style = "margin-right:5px;" type = "button" class = "btn btn-primary">Continue</button>
+          <button onclick = "reload()" style = "margin-left:10px;" type = "button" class = "btn btn-outline-secondary">Reload</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class = "modal fade"
+       id = "modalT5">
+       <div class = "modal-dialog">
+         <div class = "modal-content">
+           <div class = "modal-header">
+             <h3 class = "modal-title">
+               Perchuse available now!
+             </h3>
+             <button type = "button" class = "btn-close" data-bs-dismiss="modal"></button>
+           </div>
+           <div class = "modal-body">
+            <h6>Type 5 Heavy ready to perchuse!</h6>
+            <h6>Standard Edition 24<strong>&#8364</strong></h6>
+            <p>We are happy that we can annouciate new tank, available in shop. <br> You can get yourself a pieace of tank to roll.</p>
+           </div>
+           <div class = "modal-footer">
+             <button type = "button" class = "btn btn-warning text-light  buy-botton">Perchuse now!</button>
+             <button type = "button" class = "btn btn-danger " data-bs-dismiss = "modal">Close</button>
+           </div>
+         </div>
+       </div>
+  </div>
+
+
+  <div class = "modal fade"
+       id = "modalSpan">
+       <div class = 'modal-dialog'>
+         <div class = "modal-content">
+           <div class = "modal-header">
+             <h3 class = "modal-title">
+               Perchuse available now!
+             </h3>
+             <button type = 'button' class = "btn-close" data-bs-dismiss ="modal"></button>
+           </div>
+           <div class = "modal-body">
+            <h6>Spahpanzer ready to perchuse!</h6>
+            <h6>Standard Edition 34<strong>&#8364</strong></h6>
+            <p>We are happy that we can annouciate new tank, available in shop. <br> You can get yourself a pieace of tank to roll.</p>
+           </div>
+           <div class = "modal-footer">
+            <button type = "button" class = "btn btn-warning text-light  buy-botton">Perchuse now!</button>
+            <button type = "button" class = "btn btn-danger " data-bs-dismiss = "modal">Close</button>
+           </div>
+         </div>
+       </div>
+  </div>
+
+  <div class = "modal fade"
+       id = "modalA30">
+       <div class = "modal-dialog">
+         <div class = "modal-content">
+           <div class = "modal-header">
+            <h3 class = "modal-title">
+              Perchuse available now!
+            </h3>
+            <button type = "button" class = "btn-close" data-bs-dismiss=  "modal"></button>
+           </div>
+           <div class = "modal-body">
+            <h6>AMX 30 B ready to perchuse!</h6>
+            <h6>Standard Edition 44<strong>&#8364</strong></h6>
+            <p>We are happy that we can annouciate new tank, available in shop. <br> You can get yourself a pieace of tank to roll.</p>
+           </div>
+           <div class = "modal-footer">
+            <button type = "button" class = "btn btn-warning text-light  buy-botton">Perchuse now!</button>
+            <button type = "button" class = "btn btn-danger " data-bs-dismiss = "modal">Close</button>
+           </div>
+           </div>
+         </div>
+       </div>
+
+  </div>
+
+  <nav class = "navbar navbar-expand-sm fixed-top bg-dark">
+    <div class=  "container-fluid menu">
+      <ul class = "navbar-nav">
+        <li class = "nav-item">
+          <div class = "dropdown dropdown-menu-start">
+            <a class = 'dropdown-toggle nav-link' data-bs-toggle = "dropdown">Shop</a>
+            <ul class = "dropdown-menu">
+              <li><a class = "dropdown-item" href = '#'>Tanks</a></li>
+              <li><a class = "dropdown-item" href = '#'>Gold</a></li>
+              <li><a class = "dropdown-item" href = '#'>Special Offers</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link" href = "#sectionOffers">Offers</a>
+        </li>
+        <li class = "nav-item">
+          <a href ="#sectionFeauters" class = "nav-link">Feauters</a>
+        </li>
+        <li class = "nav-item">
+          <a href ="#page1" class = "nav-link">Cards</a>
+        </li>
+         
+        <li class = "nav-item">
+          <div class = "dropdown dropdown-menu-end">
+            <a class = 'dropdown-toggle nav-link' data-bs-toggle = "dropdown">Tickets</a>
+            <ul class = "dropdown-menu">
+              <li><a class = "dropdown-item" href = "#">South</a></li>
+              <li><a class = "dropdown-item" href = "#">East</a></li>
+              <li><a class = "dropdown-item" href = "#">West</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class = "nav-item">
+          <a class = "nav-link">Cards</a>
+        </li>
+   
+      </ul>
+    </div>
+  </nav> 
+
+  <div id = "alertholder" class = "container alert-holder">
+    <div class = "alert alert-warning alert-dismissible show fade alert-container">
+      <span class = "badge bg-dark">Server</span>
+      <span class = 'info'>Data lost</span>
+      <span class = "spinner-border spinner-border-sm text-secondary"></span>
+      <button type = "button" class = "btn-close" data-bs-dismiss = "alert"></button>
+    </div>
+    <div class = "alert alert-warning alert-dismissible show fade alert-container">
+      <span class = "badge bg-dark">Server</span>
+      <span>Error accure during mantaining</span>
+      <span class = "spinner-border spinner-border-sm text-secondary"></span>
+      <button class = "btn-close" type = "button" data-bs-dismiss = "alert"></button>
+    </div>
+    <div class = "alert alert-warning alert-dismissible show fade alert-container">
+      <span>Shop havent been updated</span>
+      <button class = "btn-close" type = "button" data-bs-dismiss = "alert"></button>
+    </div>
+    <div class = "alert alert-warning alert-dismissible show fade alert-container">
+      <span>Location is off</span>
+      <button class = "btn-close" type = "button" data-bs-dismiss = "alert"></button>
+    </div>
+    <div class = "alert alert-danger alert-dismissible show fade alert-container">
+      <span>Server off</span>
+      <button class = "btn-close" type = "button" data-bs-dismiss = "alert"></button>
+    </div>
+  </div>
+
+
+  <div class = 'container mt-5' id = "sectionOffers">
+    <div id = "carouselID"  class = 'carousel slide' data-bs-ride = "carousel">
+
+      <div class = "carousel-indicators">
+        <button type = "button" class = "active" data-bs-target = "#carouselID" data-bs-slide-to="0"></button>
+        <button type = "button"  data-bs-target = "#carouselID" data-bs-slide-to="1"></button>
+        <button type = "button" data-bs-target = "#carouselID" data-bs-slide-to="2"></button>
+      </div>
+
+      <button type = "button" class = "carousel-control-prev" data-bs-target ="#carouselID" data-bs-slide = "prev">
+        <span class = 'carousel-control-prev-icon'>
+        </span>
+      </button>
+      <button type = "button" class = "carousel-control-next" data-bs-target ="#carouselID" data-bs-slide = "next">
+        <span class = 'carousel-control-next-icon'>
+        </span>
+      </button>
+      <div class = 'carousel-inner'>
+        <div class = "carousel-item active">
+          <img src = "photos/card2.jpg.crdownload" class = "d-block " style = "width:100%;">
+          <div class = "carousel-caption carousel-text">
+            <h3>Type 5 Heavy</h3>
+            <p class=  "caption-text-is">Japanies heavy tank ready  to  roll out  by  <br> any mean. Perchuse is now available</p>
+            <div class = "stars" data-bs-toggle = "tooltip" title = "Rating: 4/5">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <button data-bs-toggle = "modal" data-bs-target = "#modalT5" type = "button" class = "btn btn-warning text-light caption-botton">More</button>
+          </div>
+        </div>
+        <div class = "carousel-item">
+          <img src = "photos/card3.jpg" class = "d-block " style = "width:100%;">
+          <div class = "carousel-caption">
+            <h3>Spahpanzer</h3>
+            <p>German medium tank now, available until <br>  june of 15th. Pre-ordered now</p>
+            <div class = "stars" data-bs-toggle = "tooltip" title = "Rating: 3/5">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <button type = "button" class = "btn btn-warning text-light caption-botton" data-bs-toggle = "modal" data-bs-target = "#modalSpan">More</button>
+          </div>
+        </div>
+        <div class = "carousel-item">
+          <img src = "photos/car3.jpg" class = "d-block " style = "width:100%;">
+          <div class = "carousel-caption">
+            <h3>AMX 30 B</h3>
+            <p>Franch medium tank ready to find out. Get <br>  yourslef a new medium tank</p>
+            <div class = "stars" data-bs-toggle = "tooltip" title = "Rating: 4/5">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <button type = "button" class = "btn btn-warning text-light caption-botton" data-bs-toggle = "modal" data-bs-target = "#modalA30">More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=  "container mt-5" id = "sectionFeauters">
+    <h2 class = "text-center">New Cars</h2>
+  </div>
+  <div class = 'container mt-5'>
+    <div id = "cardsHolderID">
+      <div class = "card">
+        <div class = "card-header" href = "#dailyID" data-bs-toggle = "collapse">
+          <a>Daily missions</a>
+        </div>
+        <div id = "dailyID" class = "collapse" data-bs-parent = "#cardsHolderID">
+          <div class = "card-body update-body ">
+            <ol class = "missions">
+              <li>
+                <a href = "#">X5 Exp earned during battle</a>
+              </li>
+              <li>
+                <a href = "#">Destroy 3 enemy tanks<a>
+              </li>
+              <li>
+                <a href = "#">Play 1 battle<a>
+              </li>
+              <li>
+                <a href = "#">Destroy 3 enemy tank destroyers<a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class = "card">
+        <div class = "card-header" href = "#UpdatesID" data-bs-toggle = "collapse">
+          <a>Upcomming updates</a>
+        </div>
+        <div id = "UpdatesID" class = "collapse" data-bs-parent = "#cardsHolderID">
+          <div class = "card-body update-body">
+            <p style = "font-weight: 500;" class = "text-dark">Upcomming update:</p>
+            <div class = "updates-holder">
+              <div>
+                <ul class = "updates">
+                  <li>
+                    <a href = "#">New Tech Tree Tanks</a>
+                  </li>
+                  <li>
+                    <a href = "#">Bugs Fixed</a>
+                  </li>
+                  <li>
+                    <a href = "#">Updated Store</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class = "updates">
+                  <li>
+                    <a href = "#">New Equipments On Sell</a>
+                  </li>
+                  <li>
+                    <a href = "#">New Flags</a>
+                  </li>
+                  <li>
+                    <a href = "#">Frontline Is Back</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class = "updates">
+                  <li>
+                    <a href = "#">Art Of Cards</a>
+                  </li>
+                  <li>
+                    <a href = "#">Added New Bonds Cars</a>
+                  </li>
+                  <li>
+                    <a href = "#">Daily Gold</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pages  -->
+  <div class=  "container mt-5">
+    <h2 class = "text-center">Availible Tanks</h2>
+  </div>
+  <div class = "container mt-5 bg-light p-2 card-holder card-active" id = "page1">
+    <div class = "row">
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = 'card card-eleme'>
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = 'height:10px;'>
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = 'height:10px;'>
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = 'height:10px;'>
+                <div class = "progress-bar bg-warning" style = "width:40%;"></div>
+              </div>
+            </div>
+            <img class = "card-img-top photo"  src = "photos/conqueror.jfif">
+          </div>
+          <div class = 'card-body'>
+            <h5 class = "card-title">Super Conqueror Selling Starts</h5>
+            <p class = 'card-text'>Super tier X heavy tank is ready.</p>
+            <a href = "#" class = "btn btn-primary button">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+            </div>
+            <img src = "photos/tier3.webp" class = "card-img-top photo">
+          </div>
+      
+          <div class = "card-body">
+            <h5 class = 'card-title'>New Modern Tanks Arraving Soon</h5>
+            <p class = "card-text">We are happy to announciate new modern tanks.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = 'card card-eleme'>
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-danger" style = "width:30%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+            </div>
+            <img class = "card-img-top photo" src = "photos/leo.jfif">
+          </div>
+
+          <div class = 'card-body'>
+            <h5 class = "card-title">Leopard Tier X Medium</h5>
+            <p class = 'card-text'>Leopard starts its engine. The most played tier X tank</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = 'card card-eleme'>
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:50%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:50%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:60%;"></div>
+              </div>
+            </div>
+            <img class = "card-img-top photo" src = "photos/meds.jfif">
+          </div>
+          <div class = 'card-body'>
+            <h5 class = "card-title">Selling Obj 247 And E25</h5>
+            <p class = 'card-text'>Selling those tanks in right time. All obout engine.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "row mt-2">
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:60%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:60%;"></div>
+              </div>
+            </div>
+            <img src = "photos/obj_259A.webp" class = "card-img-top photo">
+          </div>
+          <div class = "card-body">
+            <h5 class = 'card-title'>Selling Obj 259A</h5>
+            <p class = "card-text">Selling soviet tier X heavy.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+            </div>
+            <img src = "photos/new.webp" class = "card-img-top photo">
+          </div>
+
+          <div class = "card-body">
+            <h5 class = 'card-title'>New Tanks Arraving Soon</h5>
+            <p class = "card-text">We are happy to announciate new tanks.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3"  onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:40%;"></div>
+              </div>
+            </div>
+            <img src = "photos/obj7.jfif" class = "card-img-top photo">
+          </div>
+          <div class = "card-body">
+            <h5 class = 'card-title'>Selling Object 704 V2</h5>
+            <p class = "card-text">Two new tanks ready to sell.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3"onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)" >
+        <div class = "card card-eleme">
+        <div class = "photo-holder">
+          <div class = "progres-holder bg-light">
+            <p><strong> Gun: </strong></p>
+            <div class = "progress" style = "height: 10px;">
+              <div class = "progress-bar bg-success" style = "width:70%;"></div>
+            </div>
+            <p><strong> Armor: </strong></p>
+            <div class = "progress" style = "height: 10px;">
+              <div class = "progress-bar bg-danger" style = "width:20%;"></div>
+            </div>
+            <p><strong> Mobility: </strong></p>
+            <div class = "progress" style = "height: 10px;">
+              <div class = "progress-bar bg-warning" style = "width:50%;"></div>
+            </div>
+          </div>
+          <img src = "photos/arty.jfif" class = "card-img-top photo">
+        </div>
+      
+          <div class = "card-body">
+            <h5 class = 'card-title'>Selling Arty AMX Franche One</h5>
+            <p class = "card-text">New Artilary is ready. You can get one now.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "container mt-5 bg-light p-2 card-holder" id = "page2">
+    <div class = "row">
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+            </div>
+            <img src = "photos/tier3.webp" class = "card-img-top photo">
+          </div>
+      
+          <div class = "card-body">
+            <h5 class = 'card-title'>New Modern Tanks Arraving Soon</h5>
+            <p class = "card-text">We are happy to announciate new modern tanks.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = 'card card-eleme'>
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = 'height:10px;'>
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = 'height:10px;'>
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = 'height:10px;'>
+                <div class = "progress-bar bg-warning" style = "width:40%;"></div>
+              </div>
+            </div>
+            <img class = "card-img-top photo"  src = "photos/conqueror.jfif">
+          </div>
+          <div class = 'card-body'>
+            <h5 class = "card-title">Super Conqueror Selling Starts</h5>
+            <p class = 'card-text'>Super tier X heavy tank is ready.</p>
+            <a href = "#" class = "btn btn-primary button">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = 'card card-eleme'>
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:50%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:50%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:60%;"></div>
+              </div>
+            </div>
+            <img class = "card-img-top photo" src = "photos/meds.jfif">
+          </div>
+          <div class = 'card-body'>
+            <h5 class = "card-title">Selling Obj 247 And E25</h5>
+            <p class = 'card-text'>Selling those tanks in right time. All obout engine.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = 'card card-eleme'>
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-danger" style = "width:30%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+            </div>
+            <img class = "card-img-top photo" src = "photos/leo.jfif">
+          </div>
+
+          <div class = 'card-body'>
+            <h5 class = "card-title">Leopard Tier X Medium</h5>
+            <p class = 'card-text'>Leopard starts its engine. The most played tier X tank</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class = "row mt-2">
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:60%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:60%;"></div>
+              </div>
+            </div>
+            <img src = "photos/obj_259A.webp" class = "card-img-top photo">
+          </div>
+          <div class = "card-body">
+            <h5 class = 'card-title'>Selling Obj 259A</h5>
+            <p class = "card-text">Selling soviet tier X heavy.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3" onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:90%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+            </div>
+            <img src = "photos/new.webp" class = "card-img-top photo">
+          </div>
+
+          <div class = "card-body">
+            <h5 class = 'card-title'>New Tanks Arraving Soon</h5>
+            <p class = "card-text">We are happy to announciate new tanks.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3"onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)" >
+        <div class = "card card-eleme">
+        <div class = "photo-holder">
+          <div class = "progres-holder bg-light">
+            <p><strong> Gun: </strong></p>
+            <div class = "progress" style = "height: 10px;">
+              <div class = "progress-bar bg-success" style = "width:70%;"></div>
+            </div>
+            <p><strong> Armor: </strong></p>
+            <div class = "progress" style = "height: 10px;">
+              <div class = "progress-bar bg-danger" style = "width:20%;"></div>
+            </div>
+            <p><strong> Mobility: </strong></p>
+            <div class = "progress" style = "height: 10px;">
+              <div class = "progress-bar bg-warning" style = "width:50%;"></div>
+            </div>
+          </div>
+          <img src = "photos/arty.jfif" class = "card-img-top photo">
+        </div>
+      
+          <div class = "card-body">
+            <h5 class = 'card-title'>Selling Arty AMX Franche One</h5>
+            <p class = "card-text">New Artilary is ready. You can get one now.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+      <div class = "col-sm-3"  onmouseenter="showProgress(this)" onmouseleave="hideProgress(this)">
+        <div class = "card card-eleme">
+          <div class = "photo-holder">
+            <div class = "progres-holder bg-light">
+              <p><strong> Gun: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:70%;"></div>
+              </div>
+              <p><strong> Armor: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-success" style = "width:80%;"></div>
+              </div>
+              <p><strong> Mobility: </strong></p>
+              <div class = "progress" style = "height: 10px;">
+                <div class = "progress-bar bg-warning" style = "width:40%;"></div>
+              </div>
+            </div>
+            <img src = "photos/obj7.jfif" class = "card-img-top photo">
+          </div>
+          <div class = "card-body">
+            <h5 class = 'card-title'>Selling Object 704 V2</h5>
+            <p class = "card-text">Two new tanks ready to sell.</p>
+            <a href = "#" class = "btn btn-primary">Find Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <!-- Pagination -->
+
+  <div class = "container mt-2 pagination-holder">
+    <div class = "pagination">
+       <div onclick = "ResetActive(this,0)" class = "page-item page"><a href = "#" class = "page-link">Prev</a></div>
+       <div onclick = "ResetActive(this,1)"  class = "page-item page active"><a href = "#" class = "page-link">1</a></div>
+       <div onclick = "ResetActive(this,2)"  class = "page-item page"><a href = "#" class = "page-link">2</a></div>
+       <div onclick = "ResetActive(this,0)"  class = "page-item page"><a href = "#" class = "page-link">3</a></div>
+       <div onclick = "ResetActive(this,0)"  class = "page-item page"><a href = "#" class = "page-link">4</a></div>
+       <div onclick = "ResetActive(this)"  class = "page-item page"><a href = "#" class = "page-link">5</a></div>
+       <div onclick = "ResetActive(this)"  class = "page-item page"><a href = "#" class = "page-link">6</a></div>
+       <div onclick = "ResetActive(this)"  class = "page-item page"><a href = "#" class = "page-link">7</a></div>
+       <div onclick = "ResetActive(this)"  class = "page-item page"><a href = "#" class = "page-link">8</a></div>
+       <div onclick = "ResetActive(this)" class = "page-item"><a href = "#" class = "page-link">Next</a></div>
+    </div>
+  </div>
+
+  
+ 
+</body>
+
+<script>
+  var pages = document.getElementsByClassName("page");
+  var pagesAll = document.getElementsByClassName("card-holder");
+  var alerts = document.getElementsByClassName("alert-container");
+
+  function menu() {
+    var menuList = document.getElementById("buttons-holder");
+
+    if(window.screen.width < 800) {
+      menuList.classList.remove("btn-group");
+      menuList.classList.add("btn-group-vertical");
+    }else {
+      menuList.classList.remove("btn-group-vertical");
+      menuList.classList.add("btn-group");
+    }
+  }
+
+  errorPost();
+
+  function ResetActive(helper,helper2) {
+    for(let i = 0 ;i <pages.length; i ++) {
+      pages[i].classList.remove("active");
+    }
+    helper.classList.add("active");
+    for(let y = 0 ;y<pagesAll.length; y ++) {
+      pagesAll[y].style = "display:none;";
+    }
+    if(helper2 == 0) {
+
+    }else {
+      document.getElementById("page"+helper2).style = "display:block";
+    }
+  }
+
+  function showProgress(helperBar) {
+      let progress = helperBar.children[0].children[0].children[0];
+      progress.style = "display:block;";
+  }
+  function hideProgress(helperBar) {
+    let progress = helperBar.children[0].children[0].children[0];
+     progress.style = "display:none;";
+  }
+
+  function showAlert() {
+    let i = alerts.length-1; 
+    const helper = setInterval(function() {
+      console.log("aa");
+      if(i == 0) {
+        stopInterval();
+      }
+      alerts[i].style = "opacity:1";
+      i--;
+
+    },800);
+    function stopInterval() {
+      clearInterval(helper);
+    }
+  }
+
+  function errorPost() {
+  let helper = document.getElementById("error");
+    setTimeout(function() {
+      helper.style = "display:block;";
+      showAlert();
+    },1000);
+  }
+
+  function continueShow() {
+    let helper = document.getElementById("error");
+    let holder = document.getElementById("alertholder");
+    helper.style = "display:none;";
+    holder.style = "display:none;";
+  }
+
+  function reload() {
+    document.location = "aa.html";
+  }
+ 
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  var tooltiplist = tooltipTriggerList.map(function(toolEI) {
+    return new bootstrap.Tooltip(toolEI);
+  })
+
+</script>
+</html>
+
+
+
+
+
+
+
+

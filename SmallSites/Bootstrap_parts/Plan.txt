@@ -1,0 +1,51 @@
+Priority
+- Tehnical skills
+- Interview preparation
+
+Goals 
+- Get a job as a front End developer
+
+January
+- finish barcelona web site
+- 
+- 
+
+February
+- Angular
+- Download and explode free template
+
+Martch
+- bootstrap Start
+- start project Angular (nikolabojkovic.com
+
+April
+- Finish CSS
+- finiss JavaScript
+- Create LinkedIn Account and connect with Nikola
+- finish bootstrap
+
+May
+- Finish Agular
+- Finish BMW site
+
+June
+- Angular
+- Working on projects
+
+Jul
+- Angular
+- Working on projects
+Avgust
+
+Semptember
+- Interview preporation
+- Linked in account
+
+October
+- Apply jobs
+- Job Interveiws
+
+Check CSS verstions
+soursetree
+node
+pluralsight  angular 

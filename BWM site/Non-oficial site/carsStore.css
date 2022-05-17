@@ -2,11 +2,21 @@
 .cars-store-container {
     max-width: 1560px;
     margin: auto;
+    background-color: transparent;
+    height:auto;
+    position: relative;
+    overflow-y: auto;
+}
+.cars-store-container::-webkit-scrollbar {
+    display: none;
 }
 .cars-store {
-    height: 200px;
-    background-color: transparent;
+    position: relative;
+    height:auto;
+    background-color: blue;
     margin: auto;
+
+
 }
 .cars-store .cars-store__model-container {
     height: 390px;

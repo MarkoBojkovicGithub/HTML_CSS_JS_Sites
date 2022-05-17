@@ -1,0 +1,14 @@
+.text, .text-header, .text-aa2 {
+  font-size: 20px;
+  padding: 20px;
+  background-color: blue;
+}
+
+.text-header {
+  color: black;
+}
+
+.text-aa2 {
+  color: green;
+}
+/*# sourceMappingURL=all2.css.map */

@@ -1,0 +1,9 @@
+$bgcolor2 : red;
+$textcolor2: green;
+$fontsize: 20px;
+
+div {
+    background-color: $bgcolor2;
+    font-size: $fontsize;
+    color:$textcolor2
+}
